@@ -1,0 +1,66 @@
+   Express.js
+===========
+
+Installation:
+	npm i express@5.0.0-alpha.8
+
+------- Creating a local Sever using Express
+
+	import express from 'express'
+	const app = express();
+	app.listen(3000, ()=>{
+		log("server started at 3000 port")
+	})
+
+	app.get("/", (req, res)=>{
+		res.send("HueHueHue")
+	})
+
+------ Routes using Express
+
+	app.get("/" (req, res)=>{
+             // Home page
+	})
+
+	app.get("/about", (req, res)=>{
+	    // About Page
+	})
+
+=== Get sabkuch Methods :)	
+
+	app.all("/sabkuch", (req, res)=>{
+		res.send("saare methods accepted")
+		// will get all method requests
+	})
+
+=== 404 : Invalid Route
+
+	app.get("*", (req, res)=>{
+		res.send("404: Not Found")
+	})
+
+=== String Paths
+	"/",   "/about",  "/contact"
+
+=== String Pattern Path (Regular Expression path)
+
+	app.get("/ab?cd", (req, res)=> res.send("acd, abcd"))
+	// accept acd or abcd routes
+
+=== Regular Expression in route
+
+	app.get("/b/", ()=>)
+	// accept /b  and /b/ paths
+
+=== More than One callbacks (using next parameter)	
+
+	app.get("/path", (req, res, next)=>{
+		res.send("first callback")
+		next();
+	}, (req, res)=>{
+		res.send("second callback")
+	})
+	
+	
+
+

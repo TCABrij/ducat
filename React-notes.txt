@@ -1,0 +1,126 @@
+Day 1:
+======
+introduction classes
+
+Day 2:
+======
+
+React Installation:
+_________________
+
+Creating a project:
+cmd: npx  create-react-app  project_ name
+
+-> Get inside your project 
+  code .
+
+Folder Structure:
+default folders- node_modules, public, src.
+
+package.json:
+reports and manages installed packages.
+
+
+Starting Project:
+==============
+cmd: npm start
+
+Note: Default port 3000
+if you try to start same project on same port it will warn you if you allow it will increment the port number by 1 and start there.
+
+Entry Point: index.html.
+
+-> Pages are treated as component in React.
+
+-> There are two types of components in react
+  i) Class components
+  ii) Function componenents
+
+  Class Components:
+==================
+
+ => We extends React.Component in our class base components.
+
+___________________________________
+import React from 'react';
+class Comp extends React.Component{
+     render()
+	{
+		return ---------
+	}
+}
+___________________________________
+
+=================================
+Day 3
+=================================
+
+Note: 
+1) function, module, and component name must be in Pascal notation.
+
+-> Ways to Export and import a component
+  a) Name { } 
+  b) Default (default keyword is used)
+
+ example: import React from 'react';  ( default import )
+
+-> Return: keyword only returns single line, use wrappers or fragment to wrap more than 1 line.
+
+  wrappers: ( ) 
+
+Return returns > text, number, variables, object, array html elements, component.
+
+Fragments
+=========
+ There are two types of fragments
+ a) element fragments = <Fragment> </Fragment>
+	Before using Fragment, import it from React library
+
+   - import { Fragment } from 'react';
+	
+ b) blank fragments = <> </>
+
+
+
+Note: 
+a) Class components are faster than function components. It renders the component before sending to client where function renders on client side.
+
+=============== Day 4 =============
+took online classes at room :)
+
+
+============= Day 5 =============
+-> For React UI
+
+	a) core HTML, CSS
+	b) Bootstrap/ React-bootstrap (better)
+	c) MaterialUI
+
+Note:
+-> Replace class to className
+-> we don't use <a> tag in React because it reloads the page. only use if user want to go to another tab or link. It spoils single-page-application.
+
+-> Keywords we often hear in react
+component,
+state, hooks, 
+props.
+
+-> JSX 
+ HTML in Js
+
+
+// Search Function
+user?q=query
+
+useparams in Function based comp
+this.props.params.id in class based comp
+
+
+Click on Edit button 
+<Link to={"/update/"+user.id}
+
+
+Higher Order comp: takes a comp as input and return a comp
+
+
+

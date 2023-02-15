@@ -1,0 +1,110 @@
+       	            MongoDB
+ ====== NoSQL Database ========
+
+Mongo Installation:
+mongodb.com > products > community server 
+
+MongoDB Shell Installation:
+Tools > MongoDB Shell > select MSI Version > Download
+
+====== MongoDB Shell =====
+
+How to Show All Database:
+: show dbs
+
+How to Create Database
+: use db_name
+- Automatically switches to new database
+
+Note: The db doesn't appear until it have alteast one collection.
+
+How to Switch to another DB
+: use db_name
+
+How to Drop Database
+: db.dropDatabase()
+will delete the current db which we are on.
+
+How to create collection in DB
+: db.collection_name.insertOne({"name": "Amit"})
+
+How to insert Multiple fields
+: db.collection_name.insertMany([{"name": "hari"}, {"name": "Shurya Bhai"}])
+
+
+Refresh Data in MongoDB compass
+thee Dots > Reload Data
+
+
+=== How to See all collections in a DB
+: show collections
+
+How to show Validation
+: db.getCollectionInfos({condition})
+ex: db.getCollectionInfos({"name": "Amit"})
+
+How to drop Collection
+: db.collection_name.drop()   // Returns true if success
+
+Mutliple Fields in Collection
+: db.collection_name.insertMany([{data1}, {data2}, {data3}])
+
+ ===== Retrival of Data ===== 
+
+How to Retrive All documents of a Colection
+: db.collection_name.find();
+
+Retrive Single Document
+: db.collection_name.findOne();
+
+Retrive Data with a specific condition
+: db.colelction_name.find({condition_field})
+
+Retrive data using Mongo Object Id
+: db.colelction_name.find({_id: "f324rfd234rf32re"});
+
+How to update Document & field
+: db.collection_name.updateOne({condition}, {$set: {new field}})
+ex: db.user.updateOne({city: 'agra'}, {$set: {name: 'Rahul'})
+
+How to update Multiple field and document
+: db.user.updateMany({condition}, {$set: {multipleFields}})\
+ex: db.collecttion_name.updateMany({city: 'agra'}, {$set: {city: 'mathura'}})
+ // will update all the documents whose city is agra
+
+== Retrive/Show data using limit keyword
+: db.collection_name.find().limit(2)
+// will show first 2 documents/rows
+
+Retrive record after skipping some documents which appearing first
+: db.collection_name.find().limit(2).skip(1).
+// it will skip first matching record then show below 2 documents/records
+
+Retrive/show data after comparision
+greater : $gt
+less than ; $lt
+greater and equal : $gte
+less and equal: $lte
+
+: db.collection_name.find({age: {$lt: 34}})
+
+Retrive data between two records
+: db.collection_name.find({age: {$lt: 30, $gt: 25}})
+
+//Note:  If filed is number but quoted in string, still comparision can be possible
+
+Regex: Find/Retrive Data
+==================
+starting with a letter 		=   		/^letter/
+ending with a letter 		= 		/letter$/
+letter anywhere in String    = 		/letter/
+
+ex: db.collection_name.find({"name": /b/})
+Return all the documents containing b character in fields
+
+
+
+
+
+
+
