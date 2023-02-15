@@ -1,0 +1,55 @@
+-> Code stores in repo or repository
+
+===== Git ========
+
+-> To check Remote connection with Repo:
+	cmd -> git remote -v
+
+-> git init (to initialize git)
+
+-> git remote add origin (repo path)
+
+-> git add --all  ( to add all the files to staging area)
+
+-> git commit -m "your commit message"
+
+-> git push origin master (push changes to remote)
+
+-> git clone (repo url) [it clones the repo]
+
+-> npm install (to install node_modules)
+
+===================
+Git collaboration
+===================
+
+goto your repo settings
+goto collabation tab
+:)
+
+
+For Students:
+_________________
+
+git add -all
+git commit -m "message"
+git pull origin master
+
+Branches
+=-========
+
+git branch: check current branch
+git checkout branch_name:  switch to another branch
+
+
+Merge a Branch to another:
+==========================
+goto your another on which you want merge your current branch
+cmd: git checkout <branchName>
+
+merge command:
+git merge <branchToBeMerged>
+
+Removing git from a proj
+_________________________
+rm -r .git

@@ -108,6 +108,7 @@ props.
 -> JSX 
  HTML in Js
 
+ =========== Mahesh Sir Continues ===========
 
 // Search Function
 user?q=query
@@ -122,5 +123,40 @@ Click on Edit button
 
 Higher Order comp: takes a comp as input and return a comp
 
+=====================
+ Axios (Network call)
+=====================
 
+News API: newsapi.org
+
+const [data, setData] = useState([])
+
+
+async function getData(){
+	const response = await axios.get(newapi)
+	const data = response.data 			// actual data from api
+	const newsArticles = data.articles   // articles
+	setData(newsArticles)
+}
+
+ useEffect(){
+	getData();
+}
+
+
+Map data and display it's content.
+
+
+==== What If invalid request: 404 page
+
+<Route path="*" element={<NotFound />}/>
+
+
+================================
+
+*) userParams hook from react-router-dom
+	-> use to get dynamic route
+	-> Provided by react-router-dom
+
+*) custom Hook
 
