@@ -121,6 +121,9 @@ Click on Edit button
 
 
 Higher Order comp: takes a comp as input and return a comp
+o'
+'======= /`=='Auth '
+Auth0 -'
 
 
 
