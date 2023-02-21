@@ -209,7 +209,108 @@
 		// log family: ipv4, ipv6
 	})
 
+.......
 
+ ====================================
+			import   MongoDB-notes.txt
+====================================
+
+===== Chaining Route ====
+	app.route("/user").get((req,res)=>{
+		....
+	}).post((req, res)=>{
+		....
+	})
+
+ //  but it'll become messy If application grows
+
+=== Routes Folder ====
+  
+	==== Projec_Name
+	-> node_modules
+	-> Routes
+	->package.json
+	->package-lock.json
+	-> index.js
+	================
+
+	==== Projec_Name
+	-> node_modules
+	-> Routes
+		-> Student.js
+		->teacher.js
+	->package.json
+	->package-lock.json
+	-> index.js
+	================
+
+fOpen(student.js)
+==============
+	import express from "express"
+	const router = exrpess.Router()
+	router.get("/student", (req, res)=>{
+		res.send(..............)
+	})
+	export default router;
+
+fOpen(teacher.js)
+==============
+	import express from "express"
+	const router = exrpess.Router()
+	router.get("/teacher", (req, res)=>{
+		res.send(..............)
+	})
+	export default router;
+
+fOpen(index.js)
+==============
+	import express from "express"
+	import student from "./Routes/student.js"
+	import student from "./Routes/teacher.js"
+
+	const app = express();
+
+	app.use("/", student)
+	app.use("/", teacher)
+
+	app.listen(port, ()=>{
+		// server started
+	})
+
+======== close ============
+    Get parameters [req.params]
+========================
+  :id = id is dynamic, it can be anything
+
+ -> student.js
+	router.get("/student/delete/:id", (req, res)=>{
+		log(req.params)
+	})
+
+ === Multiple parameters get ====
+
+ (*)  router.get("/product/:category/:id", (req, res)=>{
+		const [category, id] = req.params 		// destructured
+		log(params, id)
+	})
+
+ (*)  router.get("/product/order/:month/and/:year", (req, res)=>{
+		const [category, id] = req.params 		// destructured
+		log(params, id)
+	})
+
+=== 
+
+	
+
+	
+
+
+
+
+
+
+	
 
 
 
