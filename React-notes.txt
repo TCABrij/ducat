@@ -160,3 +160,9 @@ Map data and display it's content.
 
 *) custom Hook
 
+================================
+
+	- Auth0 - 
+
+create account - New app - SPA app
+
