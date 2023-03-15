@@ -1,5 +1,330 @@
-       		   Node - 13-Fab
+       	 	 Node - 13-Fab
 	     ==============
+
+  => Node is neiter library nor Framework. It's a runtime environment to run javascript outside browser.
+  => In 2007, A Developer named Ryan Dahl took this initiative and extracted JavaScript V8 Engine from Chrome, developed node.
+
+  => Node Installation: nodejs official Website.
+
+  Note: To use "import" of ES6 add 'type': "module" in package.json or rename file with extension .mjs (Module JS>.)
+
+  ==== REPL Mode ====
+
+  Read Eval Print Loop (REPL) is a CLI Based tool from which we can run javascript code in command line interface.
+
+  ## Module Wrapper
+
+  A module Wrapper is a function that wraps around the code in module file. The module wrapper function has following signature
+
+   function(exports, require, module, __filename, __dirname){
+		// module goes here
+		// All the other Node code goes here.
+   }
+
+	The argument passed to this function are -> 
+
+	exports:
+		 An object that is used to export variables or functions from the module.
+	require:
+		 A function that is used to import other modules into the current module.
+	module:
+		 A reference to the current module.
+	__filename:
+		 The absolute path of the current module.
+	__dirname:
+		 The absolute path of the directory that contains the current module.
+
+	## Path Module 
+
+	Path module provides a set of utility functions for working with file and directory paths. The path module can be used to manipulate file paths, resolve relative paths, and normalize paths across different operating 
+	
+	=> path.join([...paths]): 
+	joins all the given path segments together using the platform-specific separator (i.e., / on UNIX and \ on Windows) and returns the resulting path.
+
+	=> path.resolve([...paths]):
+	 resolves an absolute path from a relative path or a sequence of relative paths. The resulting path is normalized to remove any redundant separators and . and .. segments.
+
+	=> path.normalize(path): 
+	normalizes a path by removing any redundant separators and . and .. segments.
+	
+	=> path.basename(path[, ext]): 
+	returns the last portion of a path, optionally stripping the file extension.
+	
+	=> path.dirname(path):
+	returns the directory name of a path.
+	
+	=> path.extname(path): 
+	returns the file extension of a path.
+
+
+	## fs Module
+
+	fs module in Node.js provides a set of functions for working with the file system. It can be used to read and write files, create and delete directories, and perform other file-related operations.
+
+	=> fs.readFile(path[, options], callback): 
+	reads the contents of a file asynchronously and passes the contents to a callback function.
+
+	=> fs.readFileSync(path[, options]):
+	reads the contents of a file synchronously and returns the contents as a string or buffer.
+
+	=> fs.writeFile(file, data[, options], callback):
+	writes data to a file asynchronously and calls a callback function once the write operation is complete.
+
+	=> fs.writeFileSync(file, data[, options]):
+	 writes data to a file synchronously.
+
+	=> fs.mkdir(path[, options], callback):
+	creates a new directory asynchronously and calls a callback function once the directory is created.
+
+	=> fs.mkdirSync(path[, options]):
+	creates a new directory synchronously.
+
+	=> fs.rmdir(path, callback):
+	removes a directory asynchronously and calls a callback function once the directory is removed.
+
+	=> fs.rmdirSync(path):
+	removes a directory synchronously.
+
+	=> fs.readdir(path[, options], callback):
+	reads the contents of a directory asynchronously and passes the contents to a callback function.
+
+	=> fs.readdirSync(path[, options]):
+	reads the contents of a directory synchronously and returns an array of filenames
+
+
+	@Reading files
+	===============
+
+	fs.rmdir(directory)  : directory must be empty
+
+	@Creating/Writing file
+	======================
+
+	fs.writeFile("fileName", "data of file")
+	example: fs.writeFile("brij.txt", "hello world")
+
+	@Reading a file
+	===============
+
+	fs.readFile(fileName, encoding)
+	example: const data = fs.readFile("brij.txt", "UTF-8")
+
+	@Append/Update a file
+	fs.appendFile(fileName, "data to be Appended")
+	example: fs.appendFile("brij.txt", "hello dunia")
+
+	@Copy a file
+	fs.copyFile(File, CopiedFile)
+	example: fs.copyFile("sample.txt", "new-file.txt")
+
+	@Get File information in Details
+	fs.stat(file/folder)
+	example= fs.stat("brij.txt", (err, stats)=>{
+		console.log(stats.size)
+	})
+
+	@Check If it's a directory or File
+	data.isDirectory(file/folder)
+		returns true if directory
+	data.isFile(file/folder)
+
+	example: fs.stat("path_of_file", (err, stats)=>{
+		log(stats.isDirectory())
+	})
+
+
+	## OS module
+
+	os.platform() // win, linux, mac
+	os.arch()  // architecture of CPU
+	os.networkInterface()
+	os.hostName()  // user name 
+
+	## URL Module 
+
+	import {URL} from 'url'
+	const myUrl = new URL("https://google.com:800/pathName?query=string#hash")
+
+	myUrl.port() // returns port of url
+	myUrl.host()
+
+
+	## Event Module
+
+	import EventEmitter from 'events'
+	// create class and instancite EventEmitter
+
+	class myEmitter extends EventEmitter{
+		let obj = new myEmitter()
+
+		// event listener
+		obj.on("event", ()=>{  // on method listenes always
+			log("event called")
+		})
+		obj.once("event" ()=>{}) // once method listes once
+	}
+
+	// trigger event
+	obj.emit("event")
+	obj.emit("event")
+	output:
+	[ event called ]
+	[ event called ]
+
+
+	=== http Module === 
+	
+	const http = require('http');
+
+	// Create the HTTP server
+	const server = http.createServer((req, res) => {
+  		// Send a response to the client
+  		res.writeHead(200, {'Content-Type': 'text/plain'});
+  		res.end('Hello, world!');
+	});
+
+	// Start the server listening on port 3000
+	server.listen(3000, () => {
+  		console.log('Server listening on port 3000');
+	});
+
+
+	@Creating Paths/Routes
+
+	if(req.url === "/")
+		// home page 
+	else if(req.url == "/about")
+		// about page 
+	else if(req.url == "/contact")
+		// contact page
+	else 
+		// 404 Not Found 
+
+
+	## DNS Module 
+
+	import dns from 'dns'
+	dns.lookup("example.com", (err, address, family)=>{
+		// log address 
+		// log family: ipv4, ipv6
+	})
+
+.......
+
+ ====================================
+			import   MongoDB-notes.txt
+====================================
+
+===== Chaining Route ====
+	app.route("/user").get((req,res)=>{
+		....
+	}).post((req, res)=>{
+		....
+	})
+
+ //  but it'll become messy If application grows
+
+=== Routes Folder ====
+  
+	==== Projec_Name
+	-> node_modules
+	-> Routes
+	->package.json
+	->package-lock.json
+	-> index.js
+	================
+
+	==== Projec_Name
+	-> node_modules
+	-> Routes
+		-> Student.js
+		->teacher.js
+	->package.json
+	->package-lock.json
+	-> index.js
+	================
+
+fOpen(student.js)
+==============
+	import express from "express"
+	const router = exrpess.Router()
+	router.get("/student", (req, res)=>{
+		res.send(..............)
+	})
+	export default router;
+
+fOpen(teacher.js)
+==============
+	import express from "express"
+	const router = exrpess.Router()
+	router.get("/teacher", (req, res)=>{
+		res.send(..............)
+	})
+	export default router;
+
+fOpen(index.js)
+==============
+	import express from "express"
+	import student from "./Routes/student.js"
+	import student from "./Routes/teacher.js"
+
+	const app = express();
+
+	app.use("/", student)
+	app.use("/", teacher)
+
+	app.listen(port, ()=>{
+		// server started
+	})
+
+======== close ============
+    Get parameters [req.params]
+========================
+  :id = id is dynamic, it can be anything
+
+ -> student.js
+	router.get("/student/delete/:id", (req, res)=>{
+		log(req.params)
+	})
+
+ === Multiple parameters get ====
+
+ (*)  router.get("/product/:category/:id", (req, res)=>{
+		const [category, id] = req.params 		// destructured
+		log(params, id)
+	})
+
+ (*)  router.get("/product/order/:month/and/:year", (req, res)=>{
+		const [category, id] = req.params 		// destructured
+		log(params, id)
+	})
+
+==== Controller ====
+
+-> In Express.js, a controller is a module or a set of modules that handle the business logic of an application. The controller is responsible for receiving the incoming requests from the clients, processing them, and sending a response back to the clients.
+
+-> A typical controller in an Express.js application consists of one or more functions, where each function corresponds to a specific endpoint or route of the application. These functions may use middleware, services, or other modules to perform the required operations, such as querying a database, validating user input, or sending an email.
+
+	and more - 
+
+-> In other words, a controller is responsible for processing user input, performing operations on the data, and returning a response to the user.
+
+-> Typically, a controller module in Express.js will define a set of functions that correspond to the HTTP methods (GET, POST, PUT, DELETE, etc.) that the controller should handle. These functions are usually named after the specific action that they perform.
+	
+
+	
+
+
+
+
+
+
+	
+
+
+
+
+
 
 
 
