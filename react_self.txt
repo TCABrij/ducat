@@ -1,0 +1,3332 @@
+      what is react:-
+==============================
+
+=> react is a javascript library.
+=> the main focas is building UI as fast as possible.
+=> this is used a single page application, means complete website in a single page.
+
+    why react is fast:-
+=================================
+react use virtual dom
+
+=> virtual dom upddate only required list.
+=> real dom update complete list.
+
+
+  why learn react:-
+=======================================
+
+=> maintaned by facebook, so it will long term in the market.
+=> High demand due to fast speed.
+=> large community for your support.
+=> Mobile app devlopement with react native.
+
+    History:-
+====================================
+=> maintained by facebook.
+=> first release on 29 may 2013.
+
+=> Apps with react:-
+
+1)Netflix
+2) whatsapp web
+3) instagram
+4) airbnb et
+
+________________________________________________________________________
+
+how to install React
+=====================
+Command== cmd> npx create-react-app appName(folder name)
+
+create app
+================
+   
+npx create-react-app (project name)
+ 
+start in vscode ===  code .
+
+folder structure
+====================
+deafult folder-- 1) node_module
+                 2) public
+                 3) src
+To start project
+==================
+
+npm start
+
+Default port of server :: localhost/3000
+
+Additional port 3001,3002,....
+
+Note:- in react we called pages by component
+
+types of component
+======================
+ 
+1) class 
+2) function
+
+----------------------------------------------------------------
+note => function name and componenet name must start with capital latters. 
+
+import and export
+====================
+1) name{}
+2) default
+
+=> we can return array,text,number ,object,html element,variable,component etc.
+=> we can use <></>(blank flagment) in our return type.
+              or
+  <fragment></fragment>
+
+git:- code stores in repo or repository
+
+=> To check remote connection with repo:-
+
+   cmd> git remote -v
+
+=> git init (to initialize git)
+=> git remote add origin (repo path)
+=> git add --all (to add all the files to staging area.
+=> git commit -m " your commit msg" 
+=> git push origin master (push changes to remote) 
+=> git clone (repo url) [it clones the repo]
+=> npm install (to install node_ modules)
+===================================================================
+                    Git collaboration
+===================================================================
+goto your repo settings
+goto collabation tab
+
+
+For student:-
+=================================
+git add --all
+git commit -m "msg"
+git pull origin master
+
+=====================================================================
+
+
+react UI
+====================
+1) core HTML,css
+2) bootstrap
+3) react bootstrap
+4) matrial UI
+
+Note:- replace className to class.
+
+Component:=
+
+1) state
+2) hooks:- part of a function
+
+============jsx=============
+html+ javascript
+
+=============================================================
+
+there are 4 way to style in react:-
+---------------------------------------------
+
+1) core html, css
+2) bootstrap
+3) react-bootstrap
+4) material UI
+
+
+
+Notes:-
+===================
+website hoisting:=
+
+DomainRacer
+59/month
+
+=====================
+
+CDN (contant delivary network)
+
+ react js first code:-
+===========================
+
+important file
+=>index.js
+=> app.js 
+
+  file structure:-
+============================
+
+package.json = package.json hamare project /applicatin ki jankari rakhta h,
+package-lock.jsoon = package.json ki jankari rakti h ki kon sa pakage kha se utaya gya h aur kiski kitni dependies h aur version ki jankaRI RAKHTA H (package.json ki jankari rakta hai)
+ 
+
+.gitingnore = iske ander hm jo file github pe upload na krni hoti h wo dal dete h to wo file github  pe uplode nhi hoti h.
+example:-
+         node_module (qki ye file bhout large hoti h)
+
+          node _module file hamare project me "npm install" krne pe vapas aa jati h
+src:-
+==========
+src folder k ander hm react k kam krte h
+
+app.js = yha see hm apna code likhna start krte h
+app.test.js = devloper cmd k through kuvh code test krte h jise testing team k load km ho jata h
+
+index.js ==  entry point of react
+
+reportvebtitle == performane ki report nikal k deti h. aur ye embaded hoti h
+
+
+set
+
+uptest.js == sare file k testing yhi se start hoti hai.
+
+
+
+public:-
+======================
+html kind of details rakhti h jo ki react js se related nhi hote h,
+
+ager hamare application me koi image use hoti h to use hm public folder me rakhte h jisse wo direct name se hi accass ho jati h.
+
+index.js ==   root id k ander sare react code run hote hai / clate h
+manifast.json=== meta files
+                 icons etc
+                  use in prograssive app.
+robots.txt=  use for protect from google search engine
+
+
+node_module:-
+ sare package isi folder me aake install hote h
+  isme hm koi kam  nhi krte hai.
+
+most important file ==> package.json
+
+
+
+component in react js:-
+======================================
+=> a piece of code that can reuse
+=> such as function
+=> but more powerfull than function(qki inka apna life cycle ,apna html hota h)
+=> header,footer is the best example
+ 
+
+types of component:-
+=================================
+=> functional component
+=> class component
+=> HOC (high order component)
+=> pure component
+=> controlled component
+=> Uncomtrolled component
+
+function component:-
+==========================
+use by inside tag
+ex:-
+     <component/>
+
+file name start with capital latters
+
+class component:-
+=====================
+import React ,{Component} from 'react'
+class user extends Componet
+{ 
+   render()
+   {
+      return(
+      );
+   }
+}
+
+
+jsx with react:-
+=====================================
+=> javascript xml
+=> write html and js togather
+=> use like html or xml tags
+
+
+click event and functions:-
+========================================
+
+
+function app()
+{
+  function apple()
+  {
+     alert("function call")
+   }
+   return(
+        <div className="app">
+        <h1>hello world</h1>
+        <button onClick={apple}>click me</button>
+        </div>
+      );
+    }
+
+}
+
+
+ => if we write "{apple()}" then it is automatic called
+=> in that case we use arrow functoin. for stoping automatic function call.
+
+
+
+state in functional component:-
+===========================================
+=> state define krne k liye sbse phle hm React our {useState} ko import krte h.
+=> useState ek hook hota h jo ki state ko maintain aur update krvane k liye use hota h. 
+=> state is basically a object.
+=> state is like variable in which we can store data.
+=> jb hm variable use krte h to hamara component re-render nhi hota h
+=> jb hm state use krte h to hamara component re-render hota h isi vajah se hi hm react me state use      krte h.
+=> usestate ko destructure krte h state define krne k liye.
+=> react component ko tb update krta h jb uski state ya to propes me changes hote h.
+
+example:-
+==========
+
+import React, {useState} from 'react';
+function app()
+{
+  const [data,setData]=useState("Shivam")
+  function updateData()
+  {
+     setdata("sp")
+  }
+     return(
+     <div>
+     <h1>{data}</data>
+     <button onClick={updateData}></button>
+     </div>
+    );
+}
+
+output:-
+shivam
+after button click =>=> sp
+====================================================
+
+state in class component:-
+===========================================
+=> state is a data container jiske ander hm name ,object,array or some information store kr skte h.
+=> import React,{component} from 'react'
+=> define constructor
+=> call super() inside constructor
+=> define state:-  
+    this.state={
+   data:"value"
+  }
+=> jb bhi hm class componenmt me koi functoin onClick k uper call krte h to hm arroow functoin button    k ander define krke k krte h
+
+example:-
+============
+ import React,{component} form 'react'
+ class app extends component
+{
+   constructor()
+ {
+   super()
+   this.state={
+   data:"1"
+   }
+ }
+   
+      function update()
+   {
+     this.setstate({data:this.state.data +1})
+   
+     render()
+  {
+     return(
+    <div classname="mydiv">
+    <h1>this.state.data</h1>
+    <button onClick={()=>update}></button>
+    </div>
+  );
+}
+
+=>state ko hm compoonent k bahar use nhi kr skte. 
+=> state public hoti hai.
+
+props with functional component:-
+====================================================
+
+=> props is like parameter.
+=> jis tarah hm function banate h to data pas krne k liye parameter define krte h
+   usi tarah jb hm component bnate h to data pass krne k liye props define krte h
+=> example:-
+    make 2 file
+  1)Student.js
+
+=> function Student()
+ {
+      return(
+   <div>
+   <h1> hello Student</h1>
+   </div>
+ );
+}
+ export defalt Student;
+
+  2)App .js
+  
+import Student from './student'
+function App()
+{
+   return(
+   <div className="app">
+    <h1>props in react</h1>
+  <Student/>
+}
+
+
+output
+=======
+props in react
+student component
+=====================
+
+pas data in component / dynamic component.
+
+
+=> example:-
+    make 2 file
+  1)Student.js
+
+=> function Student(props)
+ {
+      return(
+   <div>
+   <h1> hello {props.name}</h1>
+   </div>
+ );
+}
+ export defalt Student;
+
+  2)App .js
+  
+import Student from './student'
+function App()
+{
+   return(
+   <div className="app">
+    <h1>props in react</h1>
+>  <Student name={"shivam"}/>
+>  <Student name={"sp"}/>
+);
+}
+
+
+output
+===============
+
+props in react
+hello shivam
+hello sp
+===================
+
+=> we can pass multiple value in props
+example:-
+       
+  => function Student(props)
+ {
+      return(
+   <div>
+   <h1> hello {props.name}</h1>
+   <h2> email= {props.email}</h2>
+   </div>
+ );
+}
+ export defalt Student;
+
+  2)App .js
+  
+import Student from './student'
+function App()
+{
+   return(
+   <div className="app">
+    <h1>props in react</h1>
+>  <Student name={"shivam"} email="shivam@123gmail.com/>
+
+>  <Student name={"sp"}/>
+
+}
+
+
+output
+===============
+
+props in react
+hello shivam
+shivam@123gmail.com
+hello sp
+===================
+
+change name on click of button:-
+======================================
+
+=> function Student(props)
+ {
+      return(
+   <div>
+   <h1> hello {props.name}</h1>
+   
+   </div>
+ );
+}
+ export defalt Student;
+
+import React,{usestate} from 'react';
+import Student from './student'
+function App()
+{
+   const[name,setname]=useState("shivam")
+   return(
+   <div className="app">
+    <h1>props in react</h1>
+>  <Student name={"name"}/>
+   <button onClick={()=>{setname("sp")}}>update name</button>
+
+}
+ export default App;
+ 
+ 
+ output
+=======================================
+=> shivam
+
+=> after button click  ==>  sp
+
+=======================================
+
+     props with class component:-
+=====================================
+
+import React from 'react'
+export default class Student extends React.Component
+{
+   render()
+   {
+       return
+      (
+         <div>
+         <h1> Student</h1>
+         </div>
+      )
+   }
+}
+
+import Student from './student'
+function app()
+{
+    return(
+    <div>
+     <Student>
+    </div>
+ )       
+}
+export default App;
+
+output:-
+===========
+student
+=============
+
+pass data by props in class component:-
+===============================================
+
+import React from 'react'
+export default class Student extends React.Component
+{
+   render()
+   {
+       return
+      (
+         <div>
+         <h1> Student {this.props.name}</h1>
+         </div>
+      )
+   }
+}
+
+import Student from './student'
+function app()
+{
+    return(
+    <div>
+     <Student name="Shivam">
+    </div>
+ )       
+}
+export default App;
+
+output:-
+===============
+student shivam
+===============
+
+change on button click
+==========================
+
+import React from 'react'
+export default class Student extends React.Component
+{
+   render()
+   {
+       return
+      (
+         <div>
+         <h1> hello {this.props.name}</h1>
+         </div>
+      )
+   }
+}
+import React,{Component} from 'react';
+import Student from './student';
+class app extends React.Component
+{
+  constructor()
+ {
+    super()
+    this.state={
+    name:"Shivam"
+ }
+
+   render()
+  {
+    return(
+    <div>
+     <Student />
+    
+    <button onclick={()=> this.setState({name:"sp"})}> update name </button>
+    </div>
+  ); 
+  }      
+}
+export default App;
+
+output:-
+=========================
+shivam
+after button click => sp
+==========================
+
+  get input box value
+============================
+ thare are two method
+1) onchange event
+2) 
+
+onchange event:-
+====================
+example:-
+      function App()
+    {
+       function getData(val)
+    {
+        console.warn(val.target.value)
+     }
+      return(
+       <div>
+       <h2>input box value</h2>
+       <input type="text" onChange={getData}/>
+       </div>
+      )
+   }
+    output:-
+====================
+type ==>> shivam
+s
+sh
+shi
+shiv
+shiva
+shivam   
+======================
+
+  print value on click of button:-
+======================================= 
+
+example:-
+=============
+import React,{useState} from 'react'
+fuction App
+{
+  const[data,setData]=useState(null)
+  const[print,setprint]=useState(false)
+  function getData(val)
+ {
+    console.warn(val.target.value)
+    setData(val.target.value)
+ }
+  return(
+    <div className="app">
+  {
+     print?
+   <h2> {data} </h2>
+   :null
+  }
+
+   <input type="text" onChange={getData}/>
+   <button onClick={()=> setprint(true)> print data </button>
+    </div>
+ )
+
+} 
+
+
+hide and show element:-
+=================================
+
+import React,{useState} from 'react'
+function App()
+{
+  const[states,setStates]=useState(true)
+  return(
+   <div className="app">
+   {
+     states ? <h1>Hello</h1> : null
+
+  }
+   <button onClick={()=>setStates(false)}> Hide </button>
+   <button onClick={()=>setStates(true)> Show </button>
+   </div>
+  )
+}  
+export defalt .....
+
+hide and show on a single button (toggle):-
+===============================================
+
+import React,{useState} from 'react'
+function App()
+{
+  const[states,setStates]=useState(true)
+  return(
+   <div className="app">
+   {
+     states ? <h1>Hello</h1> : null
+
+  }
+   <button onClick={()=>setStates(!states)> toggle </button>
+   </div>
+  )
+}  
+export defalt App
+===============================================================================
+
+------------------basic form:----------------------
+===================================================
+
+e.preventDefault() => form ko submit hone se rokta h.
+
+example:-
+   
+
+   import React, {useState} from 'react'
+   function App()
+{
+   const[name,setName]=useState("")
+   const[tnc,setTnc]=useState(false)
+   const[intrest,setIntrest]=useState("")
+  
+
+ function  getFormData(e)
+ {
+     console.warn(name,tnc,intrest)
+    e.preventDefault() 
+=> // form ko submit hone se rokta h
+=> // isko na lagane pe form submit hoke refreas hota h jo ki react me nhi hona chahiye isi lioye hm       iska   use krte h
+ }
+    return(
+     <div className="App">
+     <h2> handle form in react</h2>
+     <form onSubmit={ getFormData }>
+     <input type-"text" placeholder="enter name" onChange={(e)=>setname(e.target.value)}/> <br/><br/>
+    <select onChange={(e)=>setIntrest(e.target.value)}>
+     <option>select option</optin>
+     <option>delhi</optin>
+     <option>noida</optin>
+     <option>gurgoan</optin>
+     </select>
+     <br/><br/>
+     <input type="chakebox" onChange={(e)=>setTnc(e.target.chaked)}/>
+     <span> accecpt term and conditions </span>
+     <br/><br/>	 
+     <button type="submit"> submit </button>
+    </form>
+  )
+}
+
+output
+=========================
+type name=shivam
+ noida true
+=========================
+
+conditional rerendering/ if condition/ else if candition:-
+=================================================================
+
+1) Profile.js
+
+  import React,{useState} from 'react';
+  function Profile()
+ {
+   const[loggedIn,setLoggedIn]=usestate(true)
+
+  return(
+     <div>
+     {loggedIn? <h2> WLC SHIVAM</h2>:<h2> WLC GUEST</h2>} 
+    </div>
+)  
+}
+export default Profile;
+
+2) app.js
+ import Profile from './Profile.js
+funtion App()
+{
+  return(
+  <div className="app">
+   <Profile/>
+  <div>
+);
+} 
+
+output:-
+WLC SHIVAM
+=====================
+For more than one condition:-
+==================================
+
+1) Profile.js
+
+  import {useState} from 'react';
+  function Profile()
+ {
+   const[loggedIn,setLoggedIn]=usestate(1)
+
+  return(
+     <div>
+     {loggedIn==1? <h2> WLC user 1</h2>
+      :logedIn==2? <h2> WLC user 2</h2>
+      : <h2> wlc </h2> 
+   } 
+    </div>
+)  
+}
+export default Profile;
+
+2) app.js
+ import Profile from './Profile.js
+funtion App()
+{
+  return(
+  <div className="app">
+   <Profile/>
+  <div>
+);
+} 
+
+output:-
+WLC user 1
+=====================
+
+--------pass function as a props----------
+==================================================
+2) app.js
+ import user from './user.js
+funtion App()
+{
+   funtion getData()
+  {
+    alert("hello from app")
+  }
+  return(
+  <div className="app">
+   <User data={getdata}/>
+  </div>
+);
+} 
+
+2) User.js
+ import React from 'react'
+funtion user(props)
+{
+  return(
+  <div className="app">
+   <h1> user component</h1>
+   <button onClick={()=> props.data()}> call data function </button>
+  <div>
+);
+} 
+  output
+============
+user component
+after click on button ==> hello from app
+================================================
+
+-----------------life cycle method---------------
+======================================================
+
+there are three phases:-
+==========================
+
+mounting => bearth hona :-
+1) constructor
+2) componentDidMount
+
+updating => update hona :-
+
+=> new props
+=> setStates()
+=> fourceupdate
+
+=> shouldComponentUpdate
+=> getSnapshotBeforeUpdate
+
+=>=> componenetDidUpdate
+
+unmounting => dead hona :-
+
+=> componentWillMount
+
+common in mounting and updating:-
+======================================
+=> getDerivedStatesFromProps
+=> render
+=> react updates DOM and refs
+--------------------------------------------------------------------------------
+render phase:-
+===============
+pure and has no side effect.may be paused,aborted or restared by react.
+
+pre-commit phase:-
+=========================
+can read the DOM
+
+commit phase:-
+=====================
+can work with dom ,run side effect, schedule updates.
+
+
+life cycle mathod  react me  kb kb chlate h:-
+=================================================
+1) when componenet is loaded => componenetDidMount
+
+2)when componenet is updated with state and props => componenetDidUpdate
+
+3) when component is removed =>  componentWillMount
+
+constructor life cycle method:-
+======================================
+=> event binding kr skte h
+=> states define kr skte h
+=> html load hone se phle load ho jata h
+=> sbse phle ready hota h
+=> iske ander kabhi bhi api call nhi krni chahiye.
+note:-
+===========
+super():- parant component ko call krne k liye kiya jata h
+
+=> componentDidMount l ander hm api ko call krte h.
+
+=> jb component remove hota h to life cycle 2bara start hota h.
+
+=> render means execute krke represent krna.
+-----------------------------------------------------------------------------------------
+example of constructor life cycle:-
+===========================================
+import React,{Component} from 'react';
+class app extends React.Component
+{
+  constructor()
+ {
+    super();
+    this.state={
+    name:"Shivam"
+ }
+
+   render()
+  {
+    return(
+    <div>
+     <h1>hello {this.state.name}</h1>
+    </div>
+   ) 
+  }      
+}
+export default App;
+
+output:-
+==============
+hello shivam
+===============
+
+Render life cycle method:-
+===============================  
+=> react k ander k sare html render k ander hi likhe jate h.
+=> jb bhi react me kuch change hota h to component phir se re-render ho jata h.
+=> states aur props update hone k bad render method apne ap phir se chal jata h means re-rendering ho    jati h.
+
+
+import React,{Component} from 'react';
+class User extends React.Component
+{
+ 
+   render()
+  {
+    console.warn(render method , this.props)
+    return(
+    <div>
+     <h1>hello {this.props.name}</h1>
+    </div>
+   ) 
+  }      
+}
+export default User;
+
+import User from './User.js'
+import React,{Component} from 'react';
+function App()
+{
+   const[name,setName]=useState("shivam")
+  return
+   (
+       <div className="app">
+     <user name={name}/>
+  <button onClick={()=>setName("sp")}> update </button>
+   </div>
+ )
+ }
+
+
+componentDidMount life cycle method:-
+===========================================
+
+=> state and props ke update hone ka koi effect nhi hota h
+=> iske ander hm api call klrte h
+=> koi aaisa opration jisme hide show krvana ho isle ander krte h,
+=> aaisa code jo hamare html pr depand  ho wo hm iske ander krte h.
+=> ye tb chlta h jb hamara html aur css ,DOM  sb ready ho jata h.
+
+example:-
+import React from 'react'       
+class App extends React.Componenet
+{  
+   constructor()
+  {
+    super();
+    console.warn("constructor")
+  }
+
+    componentDidMount()
+   {
+     console.warn("componentDidMount")
+   }
+  
+
+   render()
+ {
+    console.warn("inside render")
+  
+  return
+  (
+   <div classNmae="app">
+ //  <h1>componenet did mount</h1>
+   </div>
+  );
+ }
+}
+export default App;
+
+output:-
+====================
+constructor
+inside render
+comonene Did Mount
+=====================
+
+
+with state:-
+=====================
+
+import React from 'react'       
+class App extends React.Componenet
+{  
+   constructor()
+  {
+    super();
+    this.state={
+   name:"shivam"
+   }
+  }
+
+    componentDidMount()
+   {
+     console.warn("componentDidMount")
+   }
+  
+
+   render()
+ {
+    console.warn("inside render")
+  
+  return
+  (
+   <div classNmae="app">
+   <h1>{this.state.name}</h1>
+   <button onClick={()=>setState({name:"sp"})}> update data </button>  
+   </div>
+  );
+ }
+}
+export default App;
+
+output:-
+====================
+shivam
+inside render
+comonenet Did Mount
+
+after button click:-
+sp
+inside render
+=====================
+
+
+    componentDidUpdate life cycle method:-
+====================================================
+
+import React from 'react'       
+class App extends React.Componenet
+{  
+   constructor()
+  {
+    super();
+    console.warn("constructor")
+   }
+  }
+
+    componentDidUpdate()
+   {
+     console.warn("componentDidUpdate")
+   }
+  
+
+   render()
+ {
+    console.warn("inside render")
+  
+  return
+  (
+   <div classNmae="app">
+   </div>
+  );
+ }
+}
+export default App;
+
+output:-
+====================
+constructor
+inside render
+=====================
+with State and props:-
+
+import React from 'react'       
+class App extends React.Componenet
+{  
+   constructor()
+  {
+    super();
+    this.state={
+   name:"shivam"
+   }
+  }
+
+    componentDidMount()
+   {
+     console.warn("componentDidMount")
+   }
+  
+
+   render()
+ {
+    console.warn("inside render")
+  
+  return
+  (
+   <div classNmae="app">
+   <h1>{this.state.name}</h1>
+   <button onClick={()=>setState({name:"sp"})}> update data </button>  
+   </div>
+  );
+ }
+}
+export default App;
+
+output:-
+====================
+constructor
+inside render
+
+on click button:-
+---------------------
+sp
+render
+componentDidUpdate
+=======================
+
+
+prestate and preprops and snapshot:-
+==========================================
+import React from 'react'       
+class App extends React.Componenet
+{  
+   constructor()
+  {
+    super();
+    this.state={
+    count:0
+   }
+  }
+
+    componentDidMount(preProps,preStates,snapshot)
+   {
+     console.warn("componentDidMount,preState")
+   }
+  
+
+   render()
+ {
+    console.warn("inside render")
+  
+  return
+  (
+   <div classNmae="app">
+   <h1>{this.state.count}</h1>
+   <button onClick={()=>setState({name:count+1})}> update data </button>  
+   </div>
+  );
+ }
+}
+export default App;
+
+output:-
+====================
+after click button
+  1 ==> console me - 0
+==========================
+
+how to stop call componenetDidUpdate:-
+==========================================
+
+componentDidUpdate() will not be invoked when
+
+shouldComponenetUpdate() method return false.
+
+shouldComponenetUpdate life cycle method:-
+==================================================
+=> it can rendering stop. 
+=> condition deke hm render ko rok skte h
+ex:- jaise ki hm chahte h ki hamara componenet jb state ki value 5 ho to render na ho to use hm iske      ander define kr skte h.
+
+
+import React from 'react'       
+class App extends React.Componenet
+{  
+   constructor()
+  {
+    super();
+    this.state={
+    count:0
+   }
+  }
+
+    shouldComponentUpdate()
+   {
+     console.warn("componentDidMount {this.state.count})
+   }
+  
+
+   render()
+ {
+    
+  return
+  (
+   <div classNmae="app">
+   <h1>{this.state.count}</h1>
+   <button onClick={()=>setState({name:count+1})}> update data </button>  
+   </div>
+  );
+ }
+}
+export default App;
+
+output:-
+====================
+after click button
+  console me to  value update hogi pr browser pe nhi
+=============================================================
+
+after return true value cosole aur browser 2no me update hogi
+-------------------------------------------------------------------
+import React from 'react'       
+class App extends React.Componenet
+{  
+   constructor()
+  {
+    super();
+    this.state={
+    count:0
+   }
+  }
+
+    shouldComponentUpdate()
+   {
+     console.warn("shouldComponentUpdate {this.state.count})
+=>=>    return true; 
+    // byu default return false;
+   }
+  
+
+   render()
+ {
+    
+  return
+  (
+   <div classNmae="app">
+   <h1>{this.state.count}</h1>
+   <button onClick={()=>setState({name:count+1})}> update data </button>  
+   </div>
+  );
+ }
+}
+export default App;
+
+output:-
+====================
+after click button
+brower        console
+1		shouldComponentUpdate 1
+
+=================================================
+
+
+componentWillUnmount life cycle method:-
+==================================================
+=> jb bhi hamara component DOM se remove hoga to  componentWillUnmount  call hoga.
+=> jb hm kisi comonenet ko hide aur show krte h to hamara componenet DOM se remove ho jata h
+    tb bhi componentWillUnmount  call hota h.
+=> example:-
+  import Student from './Student'
+  import React,{Component} from 'react';
+class App extends React.Component
+{
+   constructor()
+ {
+   super()
+   this.state={
+    show:true
+  }
+   render()
+  {
+    return(
+    <div>
+  { 
+    this.state.show ? <student/>:<h2>child component removed</h2>
+   }
+    <button onClick={()=> this.setState({!this.state.show})}>toggle child component</button>
+
+    </div>
+   ) 
+  }      
+}
+export default App;
+
+
+student.js
+================
+
+  import React from 'react';
+class Student extends React.Component
+{
+   componentWillUnmount()
+  {
+    alert("componentwillunmount calld")
+  }
+   render()
+  {
+    return(
+    <div>
+     <h1>component will unmount </h1>
+    
+    <button>toggle child component</button>
+    </div>
+   ) 
+  }      
+}
+export default Student;
+
+output
+========================
+component will unmount
+
+after button click
+
+comoponent wiil unmount==> removed
+ and alert me componentwillunmount calld
+
+again button click 
+
+component will unmount
+=========================================================
+
+hooks in react js:-
+=========================
+=> with hooks we can use class component feacture in functional componenet such as state,
+   life cycle method, pure component, etc.
+=> jha pe bhi use aa jaye to wo hooks hote h jaise ki useState,useEffect,useRef,...etc.
+=> componentWillUnmount DOM se htne k just phle call hota h.
+
+
+--------useEffect in react js----------
+=================================================
+=> it is a combination of componentDidMount,componentDidUpdate,componentWillUnMount..
+=> jaise class component k ander bhout sare life cycle method hote hai usi tarah functional component 
+   k ander ek useEffect name ka hook  hota h jo use hota h as an life cycle method.
+
+=> jb bhi hamara comopnent bnega tb ye call hoga or jb bhi koi state update hogi tb ye call hoga.
+=> hm isme condition lga skyte h ki kb isko call krvana h. 
+
+  -----   use without condition -------
+==========================================
+syntax:-
+
+ex:- import React from 'react'
+  function App()
+{
+   React.useEffect(()=>{
+     console.warn("useEffect");
+   
+   })
+   return
+  (
+     <div className="app">
+     <h1> hooks example</h1>
+     </div>
+  )
+}  
+  export default App;
+
+
+  output:-
+==============
+console => useEffect
+browser => hooks example
+===============================
+
+ 2nd syntax:-
+=====================
+
+ex:- import React,{useEffect} from 'react'
+  function App()
+{
+   useEffect(()=>{
+ console.warn("useEffect");
+   })
+   return
+  (
+      <div className="app">
+     <h1> hooks example</h1>
+     </div>
+  )
+}  
+  export default App;
+
+ 
+  output:-
+==============
+console => useEffect
+browser => hooks example
+===============================
+
+   ------with state   -------
+=================================
+
+ex:- import React,{useEffect,useSate} from 'react'
+  function App()
+{
+
+  const[conut,setCount]=useState(0)
+   useEffect(()=>{
+ console.warn("useEffect");
+   })
+   return
+  (
+     <div className="app">
+     <h1> useEffect example {count}</h1>
+     <button onClick={()=> setCount(count+1)>update </button>
+     </div>
+  )
+}  
+  export default App;
+
+ 
+  output:-
+==============
+    useEffect example 0
+
+  on button click => useEffect example 1
+         and so on...
+=========================================================
+
+
+we can use  multiple useEffect also
+===========================================
+
+ex:- import React,{useEffect,useSate} from 'react'
+  function App()
+{
+
+  const[conut,setCount]=useState(0)
+   useEffect(()=>{
+ console.warn("useEffect 1");
+   },[for conditionl purpose])
+    useEffect(()=>{
+ console.warn("useEffect 2");
+   },[])
+   return
+  (
+     <div className="app">
+     <h1> useEffect example {count}</h1>
+     <button onClick={()=> setCount(count+1)>update </button>
+     </div>
+  )
+}  
+  export default App;
+
+ 
+  output:-
+==============
+
+-------useEffect with specific state and props--------
+====================================================================
+
+ex:- import React,{useEffect,useState} from 'react'
+  function App()
+{
+   const[data,setData]=useState(10)
+   const[count,setCount]=useState(100)
+   useEffect(()=>{
+ console.warn("useEffect called");
+   })
+   return
+  (
+     <div className="app">
+     <h1>Count: {count}</h1>
+     <h1>Data: {data}</h1>
+     
+     <button onClick={()=> setCount({count+1})}> update count </button>
+     <button onClick={()=> setData({data+1})}> update data </button>
+     
+     </div>
+  )
+}  
+  export default App;
+
+
+output:-
+==============
+browser => data 10
+           count 100
+ after any button click => data 11
+                           count 101 
+                           and so on...
+console => after update count or update data button click => useEffect called
+ 
+=> is example me hm dekh rhe h ki update data or udate count kisi bhi button pe click klrte h to 
+    count aur data 2no ki valve update ho rhi h joki shi nhi h,
+    hm chahte h ki update count button pe click krne pe only count ki value update/increse ho
+    aur update data button pr click krne pe only data ki value update ho
+   to hme ek aur parameter pas krna pdega 
+ syntax_
+            useEffect(()=>{
+ console.warn("useEffect called");
+   },[condition])
+ 
+
+ ex:- import React,{useEffect,useState} from 'react'
+  function App()
+{
+   const[data,setData]=useState(10)
+   const[count,setCount]=useState(100)
+   useEffect(()=>{
+ console.warn("useEffect called");
+   },[data])                         // only update/call  when update data button click 
+
+     useEffect(()=>{
+ console.warn("useEffect called");
+   },[count])                         // only update/call  when update count button click 
+  
+  
+   return
+  (
+     <div className="app">
+     <h1>Count: {count}</h1>
+     <h1>Data: {data}</h1>
+     
+     <button onClick={()=> setCount({count+1})}> update count </button>
+     <button onClick={()=> setData({data+1})}> update data </button>
+     
+     </div>
+  )
+}  
+  export default App;
+
+
+output:-
+==============
+browser => data 10
+           count 100
+ after update data button click => data 11
+   after update count button click => count 101 
+                           and so on...
+console => after update count or update data button click => useEffect called
+
+
+--------style type in react js-----------
+-------------------------------------------------------------------------------------
+1st method:-
+==============
+
+   import './style.css'
+   function App()
+{
+     return
+  (
+      <div>
+      <h1 className="pramary"> 1st method in style in react js </h1>
+      </div>
+  );
+}
+  export defalt App
+
+style.css=:
+=====================
+    .primary{
+    background-color:"black"
+    color:"white"  
+}
+
+  2nd method:-
+==========================
+
+  function App()
+{
+     return
+  (
+      <div>
+      <h1 style{{color:"red", backgroundColor:"black"}}> 2nd method in style in react js </h1>    
+     
+      // {{}}=> 1st= jsx syntax,  2nd = object
+
+      </div>
+  );
+}
+  export defalt App
+
+
+3rd mathod:-
+======================
+    import './custem.module.css'
+     function App()
+{
+     return
+  (
+      <div>
+      <h1 className={style.success}> 3rd method in style in react js </h1>
+      </div>
+  );
+}
+  export defalt App
+
+
+custom.module.css:-
+======================
+.success{
+  background-color:"black"
+  color:"red"
+}
+
+------install bootstrap-----
+==========================================
+=> bootstrap is a css and js library. 
+=> it is basacelly use to provide style with responsive in less time.
+=> install=> goggle > react bootstrap > react-bootstrap.github.io > get started 
+=>  npm install react-bootstrap bootstrap
+
+css:- import 'bootstrap/dist/css/bootstrap.min.css';  //in index.js file
+
+method to import component:-
+===================================
+
+1) => import Buttom from 'react-bootstrap/Button';
+
+2) => import {Button} from 'react-bootstap;
+
+------handle Array with List-------
+================================================
+
+=> return statement k ander map function work krta  for loop work nhi krta h isiliye hm react me 
+    map function ka use krte h.
+
+ example:- 
+=====================
+  function app()
+{
+   const students=[
+  {name:"shivam",email:"shivam@gmail.com,contact:9956},
+  {name:"priyanka",email:"priyanka@gmail.com,contact:9967},
+    {name:"shiva",email:"shiva@gmail.com,contact:9978},
+   {name:"priya",email:"priya@gmail.com,contact:9989},
+]
+    return 
+ (
+    <div className="app">
+    <h1> handle aaray with list</h1>
+    <table border=1>
+  {
+       <tr>
+     <td>Name</td>
+      <td>Email</td>
+     <td>Contact</td>
+    
+     </tr>
+   
+      students.map((data)=>
+     <tr>
+     <td>{data.name}</td>
+      <td>{data.email}</td>
+     <td>{data.contact}</td>
+    
+     </tr>
+     
+)}
+     </table>
+
+ ) 
+} 
+
+
+
+-----------list with bootsrap and unique key----------------
+==================================================================
+
+  example:- 
+=====================
+ import {Table} from 'react-bootstrap'
+ 
+  function app()
+{
+   const students=[
+  {name:"shivam",email:"shivam@gmail.com,contact:9956},
+  {name:"priyanka",email:"priyanka@gmail.com,contact:9956},
+    {name:"shiva",email:"shiva@gmail.com,contact:9978},
+   {name:"priya",email:"priya@gmail.com,contact:9989},
+]
+    return 
+ (
+    <div className="app">
+    <h1> handle aaray with list</h1>
+    <Table striped varient="dark">
+  {
+       <tr>
+     <td>Name</td>
+      <td>Email</td>
+     <td>Contact</td>
+    
+     </tr>
+   
+      students.map((data,i)=>
+      data.contact === 9956?
+     <tr key={i}>
+     <td>{data.name}</td>
+      <td>{data.email}</td>
+     <td>{data.contact}</td>
+      : null
+     </tr>
+     
+)}
+     </Table>
+
+ ) 
+} 
+
+output:= shivam..........
+         priyanka.............
+
+=============================================================================
+
+----------------nested list with nested array-----------------------
+________________________________________________________________________
+
+    example:- 
+=====================
+ import {Table} from 'react-bootstrap'
+ 
+  function app()
+{
+   const students=[
+  {name:"shivam",email:"shivam@gmail.com, address[
+     {hn:"10" , city:"noida" , country:"india"},
+     {hn:"20" , city:"delhi" , country:"india"},
+     {hn:"30" , city:"prayagraj" , country:"india"},
+     {hn:"90" , city:"lucknow" , country:"india"},
+    
+    ]},
+  {name:"priyanka",email:"priyanka@gmail.com, address[
+     {hn:"11" , city:"noida" , country:"india"},
+     {hn:"21" , city:"delhi" , country:"india"},
+     {hn:"31" , city:"prayagraj" , country:"india"},
+     {hn:"91" , city:"lucknow" , country:"india"},
+    
+    ]},
+    ]
+    return 
+ (
+    <div className="app">
+    <h1> handle aaray with list</h1>
+    <Table striped varient="dark">
+  {
+       <tr>
+    <td>s.n.</td>
+     <td>Name</td>
+      <td>Email</td>
+     <td>address</td>
+    
+     </tr>
+   
+      students.map((data,i)=>
+      
+     <tr key={i} >
+     <td>{i+1}</td>
+     <td>{data.name}</td>
+      <td>{data.email}</td>
+     <td>{
+     data.address.map((item)=>{
+     <Table varient="dark" striped>
+    <tr>
+    <td>item.hn</td>            
+    <td>item.city</td>            
+    <td>item.country</td>
+    </tr>
+    
+    })
+    </Table>
+     }</td>
+    
+     </tr>
+     
+)}
+     </Table>
+
+ ) 
+} 
+
+=========================================================
+
+---------reuse component-----------
+==================================== 
+
+  example:- 
+=====================
+ import {Table} from 'react-bootstrap'
+ 
+  function app()
+{
+   const users=[
+  {
+   name:"shivam",email:"shivam@gmail.com,contact:9956
+  },
+  {
+   name:"priyanka",email:"priyanka@gmail.com,contact:9956
+  }
+   ]
+   return
+  (
+      <div>
+      <h1> reuse component </h1>
+     {
+       users.map((item,i)=>{
+          <Users/ data={item}>
+      })
+     }
+      </div>
+  )
+}  
+
+
+Users.js:-
+===============
+ function User(props)
+{
+    return
+  (
+      <div>
+      <h1> User {props.data.name} </h1>
+      </div>
+  )
+}
+
+
+output:-
+==========
+shivam
+priyanka
+
+============================================
+ ------ react fragment--------
+==========================================
+
+=> recat fragment is used to handle/ wraper multiple component or multiple element.
+=> there are three method to use it
+
+1st:-
+=====
+   <React.fragment>
+  
+    ............ code
+  
+   </React.fragment>
+
+2nd:-
+===========
+  import fragment
+
+ex:-
+====
+   import React,{fragment} from 'react'
+ 
+  <fragment>
+
+  ----------code
+
+ </fragment>
+
+3rd:-
+======
+
+  only empty tag
+ ex:-
+====
+    <>
+   --------code
+    </>
+
+
+------------send data child to parent component (lifting state up)-----------
+=======================================================================================
+   parant to child
+
+App.js:-
+=========
+   import User from './User.js'
+  function App()
+{ 
+    let data="Shivam'
+    return
+ (
+     <div>
+     <h2> lifting up state</h2>
+     <User/ name={data}>
+     </div>
+  export defalt App
+
+ User.js:-
+=============
+
+  function User(props)
+{
+    return
+ (
+     <div>
+     <h2> User : {props.name}</h1>
+     <button> click me </button>
+     </div>
+ );
+
+}
+  export defalt User;
+
+output:-
+===========
+lifting up state
+ user Shivam
+=====================
+
+  child to paraent
+-----------------------------------------------
+
+App.js:-
+=========
+   import User from './User.js'
+  function App()
+{ 
+   function parentAlert(data)
+ {
+    alert(data)
+ }
+     return
+ (
+     <div>
+     <h2> lifting up state</h2>
+     <User/ alert={parentAlert} >
+     </div>
+  export defalt App
+
+ User.js:-
+=============
+
+  function User(props)
+{
+   const data="Shivam"
+    return
+ (
+     <div>
+     <h2>user : </h1>
+     <button onClick={()=> props.alert(data)}> click me </button>
+     </div>
+ );
+
+}
+  export defalt User;
+
+output:-
+===========
+lifting up state
+click => alert =>  Shivam
+===========================
+
+-------------pure component--------------
+============================================================
+=> pure component ,component ki re-rendaring ko rokta h. 
+=> pure component is a feacture on react.
+=> it works only class component.
+=> for functional component " useMemo() " hook is used as pure comonent.
+=> 
+1st step:-
+===========
+     import React,{PureComponent} from 'react'
+
+-------- pure component with state:-----------
+=======================================================
+import React,{PureComponent} from 'react';
+ class App extends React.Component
+{
+   constructor()
+ {
+   super()
+   this.state={
+     count:1
+  }
+ }
+    render
+  (
+     console.warn("checked re-renadaring")
+    return
+    (
+      <div> className="app">
+      <h1> pure component in react {this.state.count}</h1>
+      <button onClick={()=>this.setState({count:this.state.count+1})}> update </button>
+      </div>
+    )
+  )
+}
+ 
+output:-
+==============
+ browser=> pure component in react 1
+ console=> button click => checked re-rendaring
+====================================================
+=> ydi state ki value change nhi milegi to component re-render nhi hoga, pure componet yhi chek krta    hai.
+
+
+--------------pure conponet with props---------------
+===========================================================
+import User from './User.js'
+import React,{PureComponent} from 'react';
+ class App extends React.Component
+{
+   constructor()
+ {
+   super()
+   this.state={
+     count:1
+  }
+ }
+    render
+  (
+     console.warn("checked re-renadaring")
+    return
+    (
+      <div> className="app">
+      <User/ count={this.state.count} >
+      <button onClick={()=>this.setState({count:this.state.count+1})}> update </button>
+      </div>
+    )
+  )
+}
+ 
+
+ user.js:-
+==============
+
+ import React,{PureComponent} from 'react';
+ class User extends PureComponent
+{
+  
+ 
+    render
+  (
+    return
+    (
+      <div> className="app">
+      <h1> User component {this.props.count}  </h1>
+      </div>
+    );
+  )
+}
+ 
+output:-
+==============
+user component 1
+cosole=> button click=> chacked re-rendaring
+============================================================
+
+------------useMemo hook in react js-------------
+===========================================================
+
+=> jaise hm class bassed component me re-rendaring ko rokne k liye pure component ka use krte the    vaise hi hm functional component me rerendaring ko rokne k liye useMemo hook ka use kiya jata hai
+=> main work => performance ko inhance(badhana) krna.
+=> jb hm state aur props k sath kam kr rhe hote h aur hamara component unwanted re-rendaring ho rha 
+   ho to hm use useMemo ka use krke re-rendaring ko stop kr skte h.
+=> 
+
+
+example:-
+========
+  import React, {useState,useMemo} from 'react'
+  function App()
+ {
+    const[count,setCount]=useState(1)
+    const[item,setItem]=useState(10)
+    const multicountMemo= useMemo(function multiCount(){
+     console.warn("multicount")
+   return count*10;
+   }[count])
+   
+     return(
+    <div>
+     <h1> usememo in react</h1>
+     <h1>count: {count}</h1>
+     <h1>itme: {item} </h1>
+     <h1> {multicountMemo}</h1>
+     <button onClick={()=>setCount({count+1})}>update count </button>
+     <button onClick={()=>setItem({item*10})}>update item </button>
+    </div>
+   )
+ } 
+
+  export default App;
+
+
+-------------ref in react js in class component----------
+==========================================================
+=> ref can manipulate DOM
+=> ref ka use hm functional component me direct nhi kr skte h.
+=> ref directly manipulate DOM , isiliye react js ki documantatin khta h ki ise km se km use kro
+=> form me hme validation lagani h ,color bhi chamge krna h, vlaue get krni h to aaise case me hm 
+   ref  ka use kr skkte hai.
+
+ ex:-\
+
+1st:-
+========== import {createRef}
+
+  import React,{createRef} from 'react'
+  class App extenda React.Component
+{
+   constructor()
+ {
+    super();
+  this.inputRef=createRef();
+ }
+  componentDidMount()
+ {
+    console.warn("this.inputRef")
+ }
+
+   render()
+ {
+    return
+  (
+     <div>
+     <h1> ref in react</h1>
+     <input type="text" ref={this.inputRef}/>
+     </div>
+  );
+ }
+
+}
+  export defalt App;
+
+output:-
+++++++++++++++++++
+
+pure dom ki property
+===============================
+
+we can manipulate dom directly:-
+=================================
+
+ex:-
+  
+  import React,{createRef} from 'react'
+  class App extenda React.Component
+{
+   constructor()
+ {
+    super();
+  this.inputRef=createRef();
+ }
+  componentDidMount()
+ {
+    console.warn("this.inputRef.current.value=1000")
+ }
+
+   render()
+ {
+    return
+  (
+     <div>
+     <h1> ref in react</h1>
+     <input type="text" ref={this.inputRef}/>
+     </div>
+  );
+ }
+
+}
+  export defalt App;
+
+output:-
+ ref in recat
+ inside input box 1000
+
+=> dircat modify
+
+---get value by ref:-
+
+=======================
+
+  import React,{createRef} from 'react'
+  class App extenda React.Component
+{
+   constructor()
+ {
+    super();
+  this.inputRef=createRef();
+ }
+   getVal()
+  {
+     console.warn(this.inputRef.current.value)
+
+ =>  this.inputref.current.style.color="red"    // for text color
+ =>  this.inputRef.current.style.backgroundColor="green"   // background color change
+  }
+   
+   render()
+ {
+    return
+  (
+     <div>
+     <h1> ref in react</h1>
+     <input type="text" ref={this.inputRef}/>
+     <button onClick={()=>this.getVal()}> check ref</button>
+     </div>
+  );
+ }
+
+}
+  export defalt App;
+
+output:-
+ input box me jo bhi type krenge console me dom ki property k bad wo value get hogi.
+
+=============================================================================
+
+-----------useRef in functional component---------
+=====================================================
+
+=> import useRef
+
+ex:-
+   import React,{useRef} from 'react'
+  function App()
+{ 
+   let inputRef = useRef(null)
+   handleInput()
+ { 
+    inputRef.current.value=1000   // on click button give value in text box
+    inputRef.current.focas()      // for focas in text value
+    inputRef.currnet.display="none"  // hide text box on button click
+}
+  
+    return
+  (
+     <div>
+     <h1> useRef in recat </h1>
+     <input type="text" ref={inputRef}/>
+     <button onClick={handleInput}>click </button>
+     </div>
+  );  
+}
+
+
+ -----forward ref in recat js-----
+
+===========================================
+=> advance version of ref
+=>in this ex:-
+ jaise hamara input box aur button alag alag componant me ho to to use hm kaise access krenge
+
+import React,{useRef} from 'react'
+import User form './User.js'
+ function App()
+{
+   let inputRef = useRef(null)
+ function updateInput()
+ {
+   inputRef.current.value="1000"
+   inputRef.current.style.color="red"
+ }
+  
+   return
+ (
+    <div>
+     <h1>forword ref in react </h1>
+     <User ref={inputRef}/>
+     <button onClick={updateInput}> update input box </button>
+    </div>
+ );
+}
+   export default App;
+
+User.js:-
+===========
+ import React,{forward Ref} from 'react'
+function User(props,ref)
+{
+   return
+ (
+    <div>
+     <input type="text" ref={ref}/>
+    </div>
+ );
+}
+   export default forwardRef(User);
+
+output:-
+ forward ref in react
+ button click=> text box=1000(red color)
+========================================
+
+
+----------controlled component in react----------
+==========================================================
+=> react ke ander jb hm input field ko state use krke handle krte h to unko controlled component
+   khte h.
+=> unccontrolled component direct DOM Ke throw handle hote h.
+=> controlled component ke ander ek input field jarur hota h ya koi form h jiske ander 3-4 input 
+   fields hote hai.
+=>  
+ ex:-
+=====
+ import React,{useState} form 'react'
+  function App()
+{
+   let [val,setVal] = useState("")
+   let [val,setItem] = useState("")
+   
+   return
+  (
+    <div>
+    <h1> Controlled component </h1>
+    <input type="text" value={val} onChange={(e)=>setVal(e.target.value))}/>
+
+=>=> we can set default value also:-
+     <input type="text" defaultValue="000" onChange={(e)=>setVal(e.target.value)}
+    
+
+    <input type="text" value={item} onChange={(e)=>setItem(e.target.value))}/>
+    <h2> value: {val} </h2>
+    <h2> item: {item} </h2>
+    </div>
+  );
+}
+
+  output:-
+==============
+controlled component
+=> jo bhi type krenge 2no text box me
+============================================
+
+-----unControlled component---------
+==============================================
+
+=> aaise component jinke ander kuch input fields ho.
+=> wo input fields state ke through controlled nhi honi chahiye.
+=> controlled directly js or ref.
+
+ex:-
+=====
+import React,{useRef} from 'react'
+function App()
+{
+    let inputRef = useRef(null)
+    let inputRef2 = useRef(null)
+
+   function submitForm(e)
+ {
+   e.preventDefault();
+   console.warn("input ref 1 value:", inputRef.current.value)
+   console.warn("input ref 2 value:", inputRef2.current.value)
+ 
+}
+  return
+ (
+  <div>
+   <h1> uncontrolled component </h1>
+   <form onSubmit = {submit}
+   <input type="text" ref={inputRef}/>
+   <input type = "text" ref={inputRef}/>
+   <button> submit </submit>
+   </form>
+  </div>
+ );
+}
+  export default App; 
+
+output:-
+==============
+uncontrolled component
+- console => => jo bhi hm type krenge input box me
+
+ ---------------simple HOC in react-----------------
+=================================================================
+=> high order component
+=> ek component jo 2sre componet ko as a props leta ho aur ek alag se comonent return krta ho
+   aise component ko hm HOC khte h.
+=> HOC component hi as input lega aur component hi as a output deta h.
+=> ex:-
+
+  import Recat,{useRef,useState} from 'react'
+
+  function App()
+{
+  return
+ (
+   <div>
+   <h1> HOC </h1>
+   <HOCRed cmp={Counter}/>
+   <HOCGreen cmp={Counter}/>
+   <HOCBlue cmp={Counter}/>
+   </div>
+ );
+}
+
+  function HOCRed(props)                // wrapper function
+{
+  return <h2 style={{backgroundColor:"red", width:"100"}}> red <props.cmp/></h2>
+}
+  
+    function HOCGreen(props)            // wrapper function
+{
+  return <h2 style={{backgroundColor:"green", width:"100"}}> green <props.cmp/></h2>
+}
+
+    function HOCBlue(props)              // wrapper function
+{
+  return <h2 style={{backgroundColor:"Blue", width:"100"}}> blue <props.cmp/></h2>
+}
+
+
+ function Counter()
+{
+  const [count setCount] = useState(0)
+   return
+ (
+   <div>
+   <h1>  {count}  </h1>
+   <button onClick={()=> setcount(count+1)}> update </button>
+   </div>
+ );
+}
+
+
+-------------Rounting setup---------------
+==========================================
+
+website > react-router > recatrouter.com > 
+
+=> component ko pages me convert krna 
+=> add links on component 
+=> taki hr ek funcality k liye alag page bn jeye. aur use ek specific url pe call krvana its called    routing.
+
+=> terminal > npm install react-router-dom
+
+=> import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
+syntax:-
+
+  import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+  <BrowserRouter>
+    <Routes>
+            <Route path='' element={<Home />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/about' element={<About />} />
+      </Routes>
+  </BrowserRouter>  
+
+
+               or
+
+  import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
+  <Router>
+   <Link to='/home'> home page </Link> </br>
+   <Link to='/about'> home page </Link>
+   <Route path='/home'> <Home/> </Route>
+   <Route path='/about'> <About/> </Route>
+  </Router>
+
+
+ex:-
+  import React from 'react'
+  import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
+
+ function App()
+{
+   return
+  (
+    <div>  
+     <Router>
+   <Link to='/home'> home page </Link> </br>
+   <Link to='/about'> home page </Link>
+   <Route path='/home'> <Home/> </Route>
+   <Route path='/about'> <About/> </Route>
+  </Router>   
+    <Home/>
+    <About/>
+    <Contact/>
+    </div>
+  );
+}
+
+ function Home()
+{
+   return
+  (
+    <div>
+    <h1> home page </h1>
+    <p> This is home page of website </p>
+ 
+    </div>
+  );
+}
+
+ function About()
+{
+   return
+  (
+    <div>
+    <h1> about page </h1>
+    <p> this is about page of website </p>
+    </div>
+  );
+}
+
+ function Contact()
+{
+   return
+  (
+    <div>
+    <h1> contact page </h1>
+     <p>this is contact page of website </p>
+    </div>
+  );
+}
+
+ export defalt App;
+
+
+-------Routing example another  (recmanded method for react)-----------------
+==============================================================================
+
+index.js > import {BrowserRouter} from 'react-router-dom' >
+           <BrowserRouter>
+           <App/>
+           </BrowserRouter>
+            
+
+example:-
+============
+Home.js:-
+=======
+    function Home()
+{
+   return
+  (
+    <div>
+    <h1> Home page </h1>
+     <p>this is Home page of website </p>
+    </div>
+  );
+}
+
+ export defalt Home;
+
+About.js:-
+=========
+   function About()
+{
+   return
+  (
+    <div>
+    <h1> About page </h1>
+     <p>this is About page of website </p>
+    </div>
+  );
+}
+
+ export defalt About;
+
+ Nav.js:-
+=========
+   function Nav()
+{
+   return
+  (
+    <div>
+           <Link to='/'> home page </Link> </br>
+           <Link to='/about'> home page </Link>
+
+    </div>
+  );
+}
+
+ export defalt Nav ;
+
+
+App.js:-
+=======
+ import React form 'react'
+ import Nav from './Nav' 
+ import {Link, Route} from 'react-router-dom'
+ import Home from './Home' 
+import About from './About' 
+
+
+ function App()
+{
+   return
+  (
+    <div>  
+             <Nav/>
+        <Route path='/about'> <About/> </Route>
+        <Route path='/' exact={true}> <Home/> </Route>  // taki home page hr page pr na aaye
+    
+    </div>
+  );
+}
+   export Default App;
+
+
+         or
+
+
+  import React from 'react';
+  import { BrowserRouter, Route, Routes } from 'react-router-dom';
+  import Nav from './nav'
+import Home from './Home';
+import About from './About';
+function App() {
+  return (
+    <>
+      <div className="App">
+        <BrowserRouter>
+          <Nav/>
+         <Routes>
+            <Route path='' element={<Home />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            </Routes>
+          
+        </BrowserRouter>
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+
+-----page not found-----------
+======================================
+
+
+<switch>
+    <Route path='*' element={<PageNotFound />} />
+    // it also work on links.
+</switch>
+
+
+----------------Dynamic Routing with params / url params----------------
+========================================================================
+=> jb hmko na pta ho ki kitne routes banana ho to hm dynamic rounting banate h,
+   isko loop ke ander rakh ke show krte hai 
+=> iskon hm kisi id ya to kisi nAME KE base me route banate hai.
+
+    import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+    import React from 'react';
+    import User from './User'
+ex:-function App()
+ {
+     const users = [
+    {id:1 , name:"shivam"},
+    {id:2 , name:"sp"},
+    {id:3 , name:"shiva"},
+    {id:4 , name:"priya"},
+    {id:5 , name:"priyanka"},
+ ]
+   return
+  (
+    <div>
+       <Router>
+     <h1> Dynamic rounting </h1>
+   {
+     Users.map((item)=>{
+    <div><Link to={"/user/" + item.id + "/" + item.name }> <h3> {item.name}</h3></Link> </div>
+   })
+   }
+      <Route path="/user/:id/:name"   <User/> </Route>
+       </Router>
+       
+   </div>
+  );
+} 
+
+  User.js:-
+==============
+
+  import {withRouter} from 'react-router-dom'
+  function User(prop)
+  { 
+     console.warn(prop.match.params.id)
+    return
+    (
+      <div>
+        <h2> hi this is user no : {prop.match.params.id}</h2>
+        <h2> hi this is user name : {prop.match.params.name}</h2>
+
+      </div>
+    );
+  }
+
+
+    export default withRouter(User);
+
+   output:-
+============
+react dunamic routing
+shivam
+sp
+shiva
+priva
+priyanka
+
+=> jis bhi name pe click krnege uska id aur name brower pr display hoga
+===============================================================================
+note:
+------
+=> routing me hm switch isliye use krte h ki jaise ek name se 2 route ho to normally 2no route display
+   ho jayenge pr swich k ander phla jo match krega uhi display hoga.
+======================================================================================================
+
+----call get method Api----
+================================
+=> api (Application Programming Interface)
+=> qki hm direct database se get nhi kr skte isiliye api ka use krte h
+
+=> data get ==> get metch
+
+=> data store ==> post method
+
+=> data update ==> put method // put = more data =>modify // patch = specific data or just instruction
+
+=> data delete ==> delete method
+
+
+-----fetch method-------
+=============================
+
+import React,{useEffect,useState} from 'react'
+ function App()
+{
+    const [data,setData]= useState()
+   useEffect(()=>{
+   fetch(" url of api ").then((result)=>{    // fetch promis return krta h jise resolve krne ke liye
+                                                then ka use krte h
+    result.JSON().then((resp)=>{            // json bhi promise return krta h 
+   // console.warn(result,resp)
+     setData(resp)
+  })
+
+  })
+  },[])
+   return
+  (
+   <div>
+   <h1> get api </h1>
+    <table border="1">
+   <tr>
+   <td>Id</td>
+   <td>Name</td>
+   <td>adress</td>
+   <td>contact</td>
+   </tr>
+   {
+      data.map((item)=>{)
+   }
+   <tr>
+   <td>{item.userId}</td>
+   <td>{item.name}</td>
+   <td>{item.adress}</td>
+   <td>{item.contact}</td>
+   </tr>
+  })
+    </table>
+   </div>
+  );
+}
+
+output:-
+=============
+api data in table 
+=====================
+
+----------Postman---------
+==========================
+=> install > postman download > postman.com > download the app (32/64 bit) > 
+                             or
+=> postman crome plugin > postman crome link > install 
+=> after install goto app > postman
+
+----------postman with api and (submit data in api into forms)-------------
+===========================================================================
+ex:-
+  import React,{useEffect,useState} from 'react';
+  function App()
+{
+   const [name,setName] = useState("") 
+   const [email,setEmail] = useState("")
+   const [mobile,setMobile] = useState("")
+
+  function setUser()
+ {
+   let data={name,email,mobile}
+   fetch(" api url",{
+    method:'post',
+    headers:{
+     'accept':'application/json'
+     'contant-type':'application/json'
+   },
+    body:json.stringify(data)
+  }).then((result)=>{
+  result.json().then((resp)=>{
+   console.warn("resp",resp)
+ })
+  })    
+  })
+
+ }
+   return
+  (
+    <div>
+     <h1> post method </h1>
+  <input type="text" name="name" value={name} onChange={(e)=>{setName(e.target.value)}}/><br/><br/>
+  <input type="text" name="email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/><br/><br/>
+ <input type="text" name="mobile"value={mobile}onChange={(e)=>{setMobile(e.target.value)}}/><br/><br/> 
+     <button type="button" onClick={setUser}>save new user</button>
+   </div>
+  );
+}
+ export defalt App;
+
+
+
+--------------delete method with api--------------(08:18:38 )
+=============================================================
+
+ import React,{useEffect,useState} from 'react'
+ function App()
+{
+    const [data,setData]= useState()
+
+   useEffect(()=>{
+   fetch(" url of api ").then((result)=>{    // fetch promis return krta h jise resolve krne ke liye
+                                                then ka use krte h
+    result.JSON().then((resp)=>{            // json bhi promise return krta h 
+   // console.warn(result,resp)
+     setData(resp)
+  })
+
+  })
+  },[])
+
+ function deleteUser(id)
+{
+  fetch(` api url ${id}',{
+  method:'DELETE'
+}).then((result)=>{
+  result.json().then((resp)=>{
+   console.warn(resp)                   //but abhi refresh krna pdega
+})
+})
+}
+
+   return
+  (
+   <div>
+   <h1> get api </h1>
+    <table border="1">
+   <tr>
+   <td>Id</td>
+   <td>Name</td>
+   <td>adress</td>
+   <td>contact</td>
+   </tr>
+   {
+      data.map((item,i)=>{)
+   }
+   <tr key={i}>
+   <td>{item.Id}</td>
+   <td>{item.name}</td>
+   <td>{item.adress}</td>
+   <td>{item.contact}</td>
+   <td><button onClick={()=> deleteUser(item.id)}>delete</button></td>
+   </tr>
+  })
+    </table>
+   </div>
+  );
+}
+
+output:-
+=============
+delete pe click krne pe data delete to ho jayga but refresh krna pdega
+
+
+-------without refresh------
+==============================
+
+ import React,{useEffect,useState} from 'react'
+ function App()
+{
+    const [data,setData]= useState()
+
+   useEffect(()=>{
+     getList()
+  })
+
+  })
+  },[])
+
+  function getList()
+{
+     fetch(" url of api ").then((result)=>{    // fetch promis return krta h jise resolve krne ke liye
+                                                then ka use krte h
+    result.JSON().then((resp)=>{            // json bhi promise return krta h 
+   // console.warn(result,resp)
+     setData(resp)
+}
+
+ function deleteUser(id)
+{
+  fetch(` api url ${id}',{
+  method:'DELETE'
+}).then((result)=>{
+  result.json().then((resp)=>{
+   console.warn(resp)                   
+   getList()
+   
+})
+})
+}
+
+   return
+  (
+   <div>
+   <h1> get api </h1>
+    <table border="1">
+   <tr>
+   <td>Id</td>
+   <td>Name</td>
+   <td>adress</td>
+   <td>contact</td>
+   <td> opration</td>
+   </tr>
+   {
+      data.map((item,i)=>{)
+   
+   <tr key={i}>
+   <td>{item.Id}</td>
+   <td>{item.name}</td>
+   <td>{item.adress}</td>
+   <td>{item.contact}</td>
+   <td><button onClick={()=> deleteUser(item.id)}>delete</button></td>
+   </tr>
+  })
+ }
+    </table>
+   </div>
+  );
+}
+
+output:-
+=============
+ab delete k bad page ko refresh nhi krna pdega
+
+------------Pre-filled form-------------
+========================================
+
+   import React,{useEffect,useState} from 'react'
+ function App()
+{
+    const [data,setData]= useState([])
+    const [name,setName]= useState("")
+    const [email,setEmail]= useState("")
+    const [mobile,setMobile]= useState("")
+   useEffect(()=>{
+     getList()
+  })
+
+  })
+  },[])
+
+  function getList()
+{
+     fetch(" url of api ").then((result)=>{    // fetch promis return krta h jise resolve krne ke liye
+                                                then ka use krte h
+    result.JSON().then((resp)=>{            // json bhi promise return krta h 
+   // console.warn(result,resp)
+     setData(resp)
+    setName(resp[0].name)
+    setEmail(resp[0].email)
+    setMobile(resp[0].mobile)
+}
+
+ function deleteUser(id)
+{
+  fetch(` api url ${id}',{
+  method:'DELETE'
+}).then((result)=>{
+  result.json().then((resp)=>{
+   console.warn(resp)                 
+   getList()
+   
+})
+})
+}
+
+   function selectUser(id)
+  { 
+     console.warn(users[id-1])
+     let item = users(id-1)
+     setName(item.name)
+     setEmail(item.email)
+     setMobile(item.mobile)
+
+  } 
+
+   return
+  (
+   <div>
+   <h1> get api </h1>
+    <table border="1">
+   <tr>
+   <td>Id</td>
+   <td>Name</td>
+   <td>email</td>
+   <td>mobile</td>
+   <td> opration</td>
+   </tr>
+   {
+      data.map((item,i)=>{)
+   
+   <tr key={i}>
+   <td>{item.Id}</td>
+   <td>{item.name}</td>
+   <td>{item.emil}</td>
+   <td>{item.mobile}</td>
+   <td><button onClick={()=> deleteUser(item.id)}>delete</button></td>
+   <td><button onClick={()=> selectUser (item.id)}>update</button></td>
+   </tr>
+  })
+ }
+    </table>
+    <div>
+    <input type="text" value={name} /><br/><br/>
+    <input type="text"/> value={email} <br/><br/>
+    <input type="text" value={mobile}/> <br/><br/>
+     <button> update user </button> 
+    </div>
+   </div>
+  );
+}
+
+output:-
+================
+data inside table
+ 3 field
+=> jiske update user button pe click krne pe sara data input field me fill ho rha h.
+
+
+
+--------------------------update data with put method-----------------------------
+===================================================================================
+
+
+   import React,{useEffect,useState} from 'react'
+ function App()
+{
+    const [data,setData]= useState([])
+    const [name,setName]= useState("")
+    const [email,setEmail]= useState("")
+    const [mobile,setMobile]= useState("")
+    const [userId,setUserId] = useState(null)
+
+   useEffect(()=>{
+     getList()
+  })
+
+  })
+  },[])
+
+  function getList()
+{
+     fetch(" url of api ").then((result)=>{    // fetch promis retliurn krta h jise resolve krne liye
+                                                then ka use krte h aur isko json me convert krne k 
+    result.JSON().then((resp)=>{            // liye json function.., json bhi promise return krta h 
+   // console.warn(result,resp)
+     setData(resp)
+    setName(resp[0].name)
+    setEmail(resp[0].email)
+    setMobile(resp[0].mobile)
+    setUserId(resp[0].userId)
+}
+
+ function deleteUser(id)
+{
+  fetch(` api url ${id}',{
+  method:'DELETE'
+}).then((result)=>{
+  result.json().then((resp)=>{
+   console.warn(resp)                   
+   getList()
+   
+})
+})
+}
+
+   function selectUser(id)
+  { 
+     console.warn(users[id-1])
+     let item = users(id-1)
+     setName(item.name)
+     setEmail(item.email)
+     setMobile(item.mobile)
+     setUserId(item.userId)
+  } 
+
+   function updateUser()
+  {
+     let item={name.email,mobile,userId}
+     fetch(` api url ${userId}',{
+     method:'PUT',
+     headers:{
+     'accept':"appication/json",
+     'contant-type':'application/json'
+     },
+     body:JSON.stringify(item)
+     }).then((result)=>{
+     result.json().then((resp)=>{
+     console.warn(resp)                   
+     getList()
+   
+})
+})
+
+    
+  }
+
+   return
+  (
+   <div>
+   <h1> get api </h1>
+    <table border="1">
+   <tr>
+   <td>Id</td>
+   <td>Name</td>
+   <td>email</td>
+   <td>mobile</td>
+   <td> opration</td>
+   </tr>
+   {
+      data.map((item,i)=>{)
+   
+   <tr key={i}>
+   <td>{item.Id}</td>
+   <td>{item.name}</td>
+   <td>{item.emil}</td>
+   <td>{item.mobile}</td>
+   <td><button onClick={()=> deleteUser(item.id)}>delete</button></td>
+   <td><button onClick={()=> selectUser (item.id)}>update</button></td>
+   </tr>
+  })
+ }
+    </table>
+    <div>
+    <input type="text" value={name} onChange={(e)=>setName(e.terget.value)} /><br/><br/>
+    <input type="text"/> value={email} onChange={(e)=>setEmail(e.terget.value)} <br/><br/>
+    <input type="text" value={mobile} onChange={(e)=>setMobile(e.terget.value)}/> <br/><br/>
+     <button onClick={updateUser}> update user </button> 
+    </div>
+   </div>
+  );
+}
+
+output:-
+================
+api data in table list
+delete button= deletedata
+update button= update data
+------------------------------------------------------------------------------------
+
+
+------previous state in functional component-------------
+=========================================================
+
+ import React,{useState} from 'react'
+  function App()
+{
+   const [count,setCount] = useState(1)
+  
+  function updateCounter()
+ {
+    let rand=Math.flore(Math.rendom()*10)
+    setCount((pre)=>{
+  console.warn(pre)
+  if(pre<5)
+ {
+   alert("low value")
+ }
+  return rand;
+
+    or
+
+ for(i=0; i<5; i++)
+{
+    setCount((pre)=>{
+   return pre+1;
+})
+}
+
+
+
+ })
+ }
+
+   return
+ (
+    <div>
+   <h1> previos state </h1>
+   <button onClick={updateCounter}> click me to update </button>
+    </div>
+ );
+}
+   export default App;
+
+   ------------previous props with hooks----------
+=======================================================
+App.js
+=======
+    import React,{useState,useRef} from 'react'
+   import User from './user.js
+  function App()
+{
+    const [count.setCount] = useSate(1)
+   return
+(
+  <div>
+  <h1></h1>
+  <User count={count} />
+   <button onClick={()=>setcount(Math.flore(Math.random()*10)}> update </button>
+  </div>
+);
+}
+ export defalt App;
+
+ User.js:-
+===========
+
+  import React,{useState,useRef} from 'react'
+  function User(props)
+{   
+    lastval=useRef()
+   useEffect(()=>{
+   lastval.current= props.count
+  })
+  const previousProps =lastval.current
+   return
+(
+  <div>
+  <h1> current value {props.count}</h1>
+  <h1> previous value {previousCount}</h1>
+  </div>
+);
+}
+ export defalt User
+
+============================================
+--------------contaxt Api-------------------
+============================================
+
+why use :
+=========
+=> react me hm data ko parent to child or child to parent data transfer krte h buy jb data same level
+   (sibling) pe send krna hota h to to normally phle data parent ko transfer hota h phir jake 
+   2sre child /component data ransfer hota h
+=> isi ko resolve krne ke liye context api ka use hota h
+=> contaxt api ka use krke hm data ko same level pe tranfer kret h
+=> provider = data ko set krta h
+=> consumer = data ko use krna
