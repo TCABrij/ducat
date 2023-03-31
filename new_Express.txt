@@ -1,0 +1,59 @@
+A framework may include predefined classes and functions that can be used to process input, manqage haredware devices and interact with system softwqare.
+The purpose of the framework is - 
+
+We web framework is a framework that provides tools and libraries to build web applications.
+
+MVC - Model View Controller
+examples: express, django, laravel etc.
+
+ Express.js
+=========
+
+fast unopinionated, minimalist web framework
+supports: Fast and easy, routing, middleware, rest api.
+
+Installations: 
+ npm install express ----------------  4.8.1 (stable)
+ npm i exprerss@5.0.0-alpha.8  ----  5.0.0-alpha.8 (latest)
+
+Creating a local server using Express
+==============================
+
+import express from 'express'
+const app = express();
+const port = process.env.PORT || 4000
+
+// Get Request to home page
+app.get("/", (req, res)=>{
+	res.send("This is home page")
+})
+
+// listening on port
+app.listen(port, ()=>{
+	log("Server start at http://localhost:"+port)
+})
+
+*404 PAGE NOT FOUND SETUP*
+app.get("*", (req, res)=>{
+	res.send("404 Not Found 🤷‍♂️")
+})
+
+*ALL REQUEST AT SINGLE ROUTE*
+app.all("/sabkuch", (req, res)=>{
+    // this route will accept all requests
+   // GET, POST, DELETE, PUT, PATCH
+})
+
+*ROUTING IN DEPTH*
+
+
+
+
+
+
+
+
+
+
+
+
