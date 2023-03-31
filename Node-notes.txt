@@ -1,4 +1,4 @@
-       		   Node - 13-Fab
+       	 	 Node - 13-Fab
 	     ==============
 
   => Node is neiter library nor Framework. It's a runtime environment to run javascript outside browser.
@@ -209,7 +209,117 @@
 		// log family: ipv4, ipv6
 	})
 
+.......
 
+ ====================================
+			import   MongoDB-notes.txt
+====================================
+
+===== Chaining Route ====
+	app.route("/user").get((req,res)=>{
+		....
+	}).post((req, res)=>{
+		....
+	})
+
+ //  but it'll become messy If application grows
+
+=== Routes Folder ====
+  
+	==== Projec_Name
+	-> node_modules
+	-> Routes
+	->package.json
+	->package-lock.json
+	-> index.js
+	================
+
+	==== Projec_Name
+	-> node_modules
+	-> Routes
+		-> Student.js
+		->teacher.js
+	->package.json
+	->package-lock.json
+	-> index.js
+	================
+
+fOpen(student.js)
+==============
+	import express from "express"
+	const router = exrpess.Router()
+	router.get("/student", (req, res)=>{
+		res.send(..............)
+	})
+	export default router;
+
+fOpen(teacher.js)
+==============
+	import express from "express"
+	const router = exrpess.Router()
+	router.get("/teacher", (req, res)=>{
+		res.send(..............)
+	})
+	export default router;
+
+fOpen(index.js)
+==============
+	import express from "express"
+	import student from "./Routes/student.js"
+	import student from "./Routes/teacher.js"
+
+	const app = express();
+
+	app.use("/", student)
+	app.use("/", teacher)
+
+	app.listen(port, ()=>{
+		// server started
+	})
+
+======== close ============
+    Get parameters [req.params]
+========================
+  :id = id is dynamic, it can be anything
+
+ -> student.js
+	router.get("/student/delete/:id", (req, res)=>{
+		log(req.params)
+	})
+
+ === Multiple parameters get ====
+
+ (*)  router.get("/product/:category/:id", (req, res)=>{
+		const [category, id] = req.params 		// destructured
+		log(params, id)
+	})
+
+ (*)  router.get("/product/order/:month/and/:year", (req, res)=>{
+		const [category, id] = req.params 		// destructured
+		log(params, id)
+	})
+
+==== Controller ====
+
+-> In Express.js, a controller is a module or a set of modules that handle the business logic of an application. The controller is responsible for receiving the incoming requests from the clients, processing them, and sending a response back to the clients.
+
+-> A typical controller in an Express.js application consists of one or more functions, where each function corresponds to a specific endpoint or route of the application. These functions may use middleware, services, or other modules to perform the required operations, such as querying a database, validating user input, or sending an email.
+
+	and more - 
+
+-> In other words, a controller is responsible for processing user input, performing operations on the data, and returning a response to the user.
+
+-> Typically, a controller module in Express.js will define a set of functions that correspond to the HTTP methods (GET, POST, PUT, DELETE, etc.) that the controller should handle. These functions are usually named after the specific action that they perform.
+	
+
+	
+
+
+
+
+
+
+	
 
 
 
