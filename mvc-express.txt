@@ -1,0 +1,19 @@
+ index.js
+=======
+	import router from './routes/routes.js
+	app.use("/user", router)
+
+path: routes/routes.js
+=-=-=-=-=-=-=-=-=-=-=-=
+	import express from 'express'
+	const router = express.Routes()
+	router.get('/all', (req, res)=>{
+	res.send("all user data get")
+
+	export default router;
+})
+
+// the requst will go from user to all
+URL: 		localhost:3000/user/all
+
+
