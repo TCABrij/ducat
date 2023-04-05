@@ -1,4 +1,13 @@
- index.js
+Folder Structure After Routes
+=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	routes/
+		routes.js
+	node_modules
+	index.js
+	package-lock.json
+	package.json
+
+index.js
 =======
 	import router from './routes/routes.js
 	app.use("/user", router)
