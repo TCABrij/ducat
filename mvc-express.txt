@@ -12,8 +12,8 @@ index.js
 	import router from './routes/routes.js
 	app.use("/user", router)
 
-path: routes/routes.js
-=-=-=-=-=-=-=-=-=-=-=-=
+routes/routes.js
+=-=-=-=-=-=-=-=-=
 	import express from 'express'
 	const router = express.Routes()
 	router.get('/all', (req, res)=>{

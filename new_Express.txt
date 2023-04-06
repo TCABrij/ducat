@@ -161,6 +161,47 @@ app.get("/user/delete/:id", (req, res)=>{
 	// localhost:3000/article/32 
 })
 
+	Let's Start Controller Goiis 
+=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=
+
+Controllers are used to seperate the business logic from the other code. It is helpful for debugging 
+and to wrtie optimal code. We create a new folder named controller and create controllers init.
+
+Folder Structure After Cotroller:
+	controller
+		controller.js
+	node_modules
+	routes
+		rutes.js
+	index.js
+	package.json
+
+controller/controller.js:
+----------------------------
+	const studentController = (req, res)=>{
+		res.send("seperate controller for student")
+	}
+	export default studentController;
+
+route/routes.js
+------------------
+	import studentController from './controller/studentController.js'
+	const router = express.Router()
+	router.get("/", studentController)
+
+	Views
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Views are used to seperate UI from rest of the code
+It consists of UI documents such as html.
+
+Folder structure after Views
+	<%= previousFolderStructure %>
+	views/
+		index.html
+			//html code
+
+
+
 
 
 
