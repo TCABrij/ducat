@@ -26,3 +26,73 @@ routes/routes.js
 URL: 		localhost:3000/user/all
 
 
+7-4-2023
+=-==-=-=-=-= EJS Template Engine =-=-=-=-=-=-=-=
+
+	EJS stands for Embedded JavaScript. It is a simple templating language that 
+	allows you to generate HTML markup with plain JavaScript. EJS can be used 
+	on both the client-side and server-side of web development. 
+
+	With EJS, you can insert dynamic data into HTML templates by using simple tags. 
+	For example, you can include variables, loops, and conditional statements in your 
+	HTML templates. When you render the template, EJS will replace these tags with 
+	the appropriate values and logic. 
+
+	EJS is often used with Node.js and Express.js on the server-side to generate dynamic
+	 web pages. It is also compatible with other JavaScript frameworks and can be used 
+	in client-side web applications.
+
+Folder Structure After Views
+=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	controller/
+		userController.js
+	routes/
+		routes.js
+	node_modules
+	views/
+		index.ejs
+		about.ejs     
+	index.js
+	package-lock.json
+	package.json
+
+ Installations: npm install ejs
+=-==-==-=--=-==-=-=-=
+// create server
+// create controller
+// create routes
+
+then in index.js set view engine:-
+
+	app.set("view engine", "ejs")
+	
+::: Instead of using res.send we use res.render method to send files to browser
+
+	res.render("index")
+	// It will render index.ejs file to browser
+
+Note: all the ejs file must be inside views folder
+	for example:    views/index.ejs,	views/about.ejs
+
++ We can send data to EJS file dynamically
+	const name = "shivam"
+	res.render("index", {"name": name})
+
+{in index.ejs file}
+	<h1>
+		 User name:  <%= name %>
+	</h1>
+=-=-=-=
+Note:
+=-=-==
+<%= VariableName %> is used to get value of a variable in ejs file which is sent from res.render method
+
+
+
+
+
+
+
+
+
+
