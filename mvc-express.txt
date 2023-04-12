@@ -76,20 +76,34 @@ Note: all the ejs file must be inside views folder
 
 + We can send data to EJS file dynamically
 	const name = "shivam"
-	res.render("index", {"name": name})
+	res.render("index", {"naam": name})
 
 {in index.ejs file}
 	<h1>
-		 User name:  <%= name %>
+		 User name:  <%= naam %>
 	</h1>
-=-=-=-=
-Note:
-=-=-==
+=-=-=-=-=
+=  Note:   =
+=-=-=-=-=
 <%= VariableName %> is used to get value of a variable in ejs file which is sent from res.render method
 
+*Creating variables in Ejs file*
+<% var variableName = value %>
 
+*Conditional Statements in Ejs*
+	<% 	if(true)  { %>
+		//body
+	<% } %>
 
+*Loops*
+	<% for(initialization ; condtion ; increment/decrement) { %>
+		// body of loops
+	<% } %>
 
+Note: <% %> tag is used to insert any JavaScript that supports ejs in Ejs File, that's it.
+
+*Include another Ejs file in current file*
+<%-  include("/anotherFile.ejs")  %>
 
 
 
