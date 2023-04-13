@@ -1,0 +1,70 @@
+Database Connection
+=================
+
+import mongoose from 'mongoose'
+
+mongoose.connect("DB URI/db_name").then(()=>{
+	console.log("connected successfully")
+})
+
+example: 
+mongoose.connect("mongodb://127.0.0.1/ducat").then(()=>{
+	console.log("connected successfully")
+})
+
+Better to Seperate connnection file
+=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=
+new folder and file
+	database/
+	    connection.js
+
+In connections.js:
+	import mongoose from 'mongoose'
+	const connectDB = (db_url)=>{
+		return mongoose.connect(db_url).then(()=>{
+			console.log("connection successfull.")
+		})
+	}
+	
+	export default connectDB;
+
+in Index.js:
+	import connectDB from 'database/connection.js'
+	const db_url = process.env.DB_URL || "mongodb://127.0.0.1/crud"
+	connectDB(db_url)
+
+Always use Asynchronous function for Database connection
+==============================================
+In connection.js file:
+	import mongoose from 'mongoose'
+	const connectDB = async (db_url)=>{
+		try{
+			await mongoose.connect(db_url)
+			console.log("connection successfull.")
+		 }
+		catch(err){
+			console.log(err)
+		}
+	}
+	
+	export default connectDB;
+
+Custom Database name and Authentication
+
+const dbname = {
+	dbName: "name of database"
+	user: "username"
+	pass: "password"
+}
+
+	mongoose.connection(db_url, dbname)
+
+
+
+
+
+
+
+
+
+

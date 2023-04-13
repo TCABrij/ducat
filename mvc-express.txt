@@ -105,6 +105,16 @@ Note: <% %> tag is used to insert any JavaScript that supports ejs in Ejs File, 
 *Include another Ejs file in current file*
 <%-  include("/anotherFile.ejs")  %>
 
+Model Starts from here
+-0-0-0-0-0-0-0-0-0-0-0-
+will use mongoose library: npm i mongoose
+
+Folder Structure
+=-=-=-=-=-=-=-=-=
+	- previous folder structure
+	- model
+
+
 
 
 
