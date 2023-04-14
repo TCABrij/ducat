@@ -115,6 +115,73 @@ Folder Structure
 	- model
 
 
+Crating schema and model
+=======================
+In Model/studentModel.js
+
+const studentSchema = new mongoose.Schema({
+	name: String,
+	age: Number,
+	city: String
+})
+
+const studentModel = mongoose.model('student', studentSchema);
+export deafult studentModel; // (If you want to use model in other file)
+
+// Inserting Document using Models
+We can do this by creating a createDoc function
+
+const creatDoc = async()=>{
+	const stuDoc = new stuModel({
+		name: "Brij",
+		age: "1",
+		city:  "agra"
+	})
+
+	const resut = await stuDoc.save()
+	log(result);
+}
+
+export default createDoc;
+
+Where we want to use import the createDoc func
+createDoc();
+
+Always use Asynchronous functions to deal with Databases
+=============================================
+
+const createDoc = async ()=>{
+	try{
+		const stuDoc = new stuModel({
+			name: "value"
+			age: "value"
+			city: "value"
+		})
+		const result = await stuDoc.save();
+	} catch(err){
+		log("Something weired just happened");
+	}
+}
+
+// Inserting Multiple Docs using Mongoose
+
+const shivam = new studentModel({
+	name: "shivam",
+	age: 20,
+	city: "Prayagraj"
+})
+const sameer = new studentModel({
+	name: "sameer",
+	age: 22,
+	city: "Mirzapur"
+})
+
+const result = await stuModel.insertMany([shivam, sameer])
+
+
+
+
+
 
 
 
