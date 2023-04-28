@@ -1,0 +1,56 @@
+		=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ 			express-validator Module
+		=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+	express-validator is a set of express.js middlewares that wraps the extensive collection 
+	of validators and sanitizers offered by validator.js.
+
+	It allows you to combine them in many ways so that you can validate and sanitize your 
+	express requests, and offers tools to determine if the request is valid or not, which 
+	data was matched according to your validators, and so on.
+
+
+  Installation: npm i express-validator
+  
+
+  Setup in your Application
+=============================
+
+	import express from 'express'
+	import {_________} from 'express-validator'
+
+
+Form Validation using express-validator
+=======================================
+ 
+ import {check, validationResult} from 'express-validator'
+
+ check middleware
+==================
+
+  check(fields:string, message)
+
+ fields:- 	One or more field names to select. If omitted, selects the whole request location.
+ message:-	Which error message to use when a validator doesn't specify one.
+ 
+Example:
+-------
+
+ user is submitting form on /verify route, which submits email field, which needs to be verified 
+ whether it's a correct form of email or not.
+
+ app.post("/verify", [
+     check("email", "Email is not valid").isEmail()
+ ], (req, res)=>{
+     const result = validationResult
+	 if(result.isEmpty())
+		res.send("valid email")
+	 else
+	    res.send(result)
+ })
+
+
+ The check middleware will check for the field(email) if it's email then proceeds the request
+ if not then error message is being pushed to validationResult object. which we can use to 
+ handle the request.
